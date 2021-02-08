@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
-<org.eventb.core.scEvent name="'" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/Project/MainContext.bcc" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.seesContext#("/>
+<org.eventb.core.scInternalContext name="MainContext">
+<org.eventb.core.scCarrierSet name="Services" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.carrierSet#+" org.eventb.core.type="ℙ(Services)"/>
+<org.eventb.core.scCarrierSet name="CardId" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.carrierSet#-" org.eventb.core.type="ℙ(CardId)"/>
+<org.eventb.core.scCarrierSet name="Customers" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(Customers)"/>
+<org.eventb.core.scCarrierSet name="Reservations" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.carrierSet#," org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.scCarrierSet name="Officers" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.carrierSet#*" org.eventb.core.type="ℙ(Officers)"/>
+<org.eventb.core.scCarrierSet name="Cleaners" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(Cleaners)"/>
+<org.eventb.core.scCarrierSet name="Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scEvent name="MainContexu" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
+<org.eventb.core.scEvent name="MainContexv" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="billing" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#1"/>
+<org.eventb.core.scEvent name="MainContexw" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="payement" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#."/>
+<org.eventb.core.scEvent name="MainContexx" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkIn" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#\/"/>
+<org.eventb.core.scEvent name="MainContexy" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkOut" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#0"/>
 </org.eventb.core.scMachineFile>

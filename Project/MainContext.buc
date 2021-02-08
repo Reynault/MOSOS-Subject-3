@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3"/>
+<org.eventb.core.contextFile org.eventb.core.comment="main context defining global sets" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.comment="modeling rooms with a set" org.eventb.core.identifier="Rooms"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.comment="modeling customers with a set" org.eventb.core.identifier="Customers"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.comment="cleaners agents" org.eventb.core.identifier="Cleaners"/>
+<org.eventb.core.carrierSet name="*" org.eventb.core.comment="security officers" org.eventb.core.identifier="Officers"/>
+<org.eventb.core.carrierSet name="+" org.eventb.core.comment="modeling services provided by the hotel" org.eventb.core.identifier="Services"/>
+<org.eventb.core.carrierSet name="," org.eventb.core.comment="modeling all the reservations" org.eventb.core.identifier="Reservations"/>
+<org.eventb.core.carrierSet name="-" org.eventb.core.comment="modeling a card id" org.eventb.core.identifier="CardId"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="." org.eventb.core.identifier="officer"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="/" org.eventb.core.identifier="cleaner"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="0" org.eventb.core.identifier="customer"/>
+</org.eventb.core.contextFile>
