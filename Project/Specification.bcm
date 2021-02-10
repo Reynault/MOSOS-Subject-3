@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scMachineFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
 <org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/Project/MainContext.bcc" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.seesContext#("/>
 <org.eventb.core.scInternalContext name="MainContext">
 <org.eventb.core.scCarrierSet name="Billings" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.carrierSet#4" org.eventb.core.type="ℙ(Billings)"/>

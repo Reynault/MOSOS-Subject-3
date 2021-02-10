@@ -9,5 +9,14 @@
 <org.eventb.core.carrierSet name="2" org.eventb.core.comment="Where you sleep" org.eventb.core.identifier="BedRooms"/>
 <org.eventb.core.carrierSet name="3" org.eventb.core.comment="Something like swimmingpool" org.eventb.core.identifier="ServiceRooms"/>
 <org.eventb.core.carrierSet name="4" org.eventb.core.comment="For those who paid further" org.eventb.core.identifier="Billings"/>
+<org.eventb.core.axiom name="5" org.eventb.core.comment="We are separating each set in subset like Cards' id (Officers, cleaners, Customers have differents id) " org.eventb.core.label="axm1" org.eventb.core.predicate="Cleaners ⊂ CardIds"/>
+<org.eventb.core.axiom name="6" org.eventb.core.label="axm2" org.eventb.core.predicate="Officers ⊆ CardIds"/>
+<org.eventb.core.axiom name="7" org.eventb.core.label="axm3" org.eventb.core.predicate="Customers ⊆ CardIds"/>
+<org.eventb.core.axiom name="8" org.eventb.core.comment="the conjunction of each subset of a same set is the empty set" org.eventb.core.label="axm4" org.eventb.core.predicate="Cleaners ∩ Customers = ∅"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="axm5" org.eventb.core.predicate="Officers ∩ Customers = ∅"/>
+<org.eventb.core.axiom name=":" org.eventb.core.label="axm6" org.eventb.core.predicate="Cleaners ∩ Officers = ∅"/>
+<org.eventb.core.axiom name=";" org.eventb.core.comment="We'll do the same for Rooms" org.eventb.core.label="axm7" org.eventb.core.predicate="BedRooms ⊆ Rooms"/>
+<org.eventb.core.axiom name="=" org.eventb.core.label="axm8" org.eventb.core.predicate="ServiceRooms ⊆ Rooms"/>
+<org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm9" org.eventb.core.predicate="BedRooms ∩ ServiceRooms = ∅"/>
 <org.eventb.core.carrierSet name="?" org.eventb.core.comment="Card id for cleaners" org.eventb.core.identifier="Cleaners"/>
 </org.eventb.core.contextFile>
