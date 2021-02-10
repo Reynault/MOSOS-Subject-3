@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="5">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="Billings" org.eventb.core.type="ℙ(Billings)"/>
 <org.eventb.core.poIdentifier name="Services" org.eventb.core.type="ℙ(Services)"/>
-<org.eventb.core.poIdentifier name="CardId" org.eventb.core.type="ℙ(CardId)"/>
 <org.eventb.core.poIdentifier name="Customers" org.eventb.core.type="ℙ(Customers)"/>
 <org.eventb.core.poIdentifier name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
 <org.eventb.core.poIdentifier name="Officers" org.eventb.core.type="ℙ(Officers)"/>
 <org.eventb.core.poIdentifier name="Cleaners" org.eventb.core.type="ℙ(Cleaners)"/>
+<org.eventb.core.poIdentifier name="BedRooms" org.eventb.core.type="ℙ(BedRooms)"/>
+<org.eventb.core.poIdentifier name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
 <org.eventb.core.poIdentifier name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="ServiceRooms" org.eventb.core.type="ℙ(ServiceRooms)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPMainContexu" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPMainContexv" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPMainContexw" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPMainContexx" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPMainContexy" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5"/>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5"/>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="isFree" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="isOccupied" org.eventb.core.type="Rooms"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTMainContexw" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="isOccupied'" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="isFree'" org.eventb.core.type="Rooms"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMainContexw" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTIDENTMainContexw" org.eventb.core.poStamp="9"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMainContexx" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMainContexy" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMainContexz" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMainContex{" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="isFree∈Rooms" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="isOccupied∈Rooms" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#4"/>
+</org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

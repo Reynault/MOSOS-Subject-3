@@ -12,4 +12,6 @@
 <org.eventb.core.event name="/" org.eventb.core.comment="check in when a customer is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkIn"/>
 <org.eventb.core.event name="0" org.eventb.core.comment="check out when a customer is leaving a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkOut"/>
 <org.eventb.core.variable name="2" org.eventb.core.comment="function that gives us " org.eventb.core.identifier="hasRole"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv1" org.eventb.core.predicate="isFree ∈ Rooms"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv2" org.eventb.core.predicate="isOccupied ∈ Rooms"/>
 </org.eventb.core.machineFile>
