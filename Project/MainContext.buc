@@ -7,16 +7,20 @@
 <org.eventb.core.carrierSet name="4" org.eventb.core.comment="For those who paid further" org.eventb.core.identifier="Billings"/>
 <org.eventb.core.axiom name="5" org.eventb.core.comment="We are separating each set in subset like Cards' id (Officers, cleaners, Customers have differents id)" org.eventb.core.label="axm1" org.eventb.core.predicate="cleaners ⊂ CardIds"/>
 <org.eventb.core.axiom name="6" org.eventb.core.label="axm2" org.eventb.core.predicate="officers ⊆ CardIds"/>
-<org.eventb.core.axiom name="7" org.eventb.core.label="axm3" org.eventb.core.predicate="customers ⊆ CardIds"/>
-<org.eventb.core.axiom name="8" org.eventb.core.comment="the conjunction of each subset of a same set is the empty set" org.eventb.core.label="axm4" org.eventb.core.predicate="cleaners ∩ customers = ∅"/>
-<org.eventb.core.axiom name="9" org.eventb.core.label="axm5" org.eventb.core.predicate="officers ∩ customers = ∅"/>
+<org.eventb.core.axiom name="7" org.eventb.core.label="axm3" org.eventb.core.predicate="roomIds ⊆ CardIds"/>
+<org.eventb.core.axiom name="8" org.eventb.core.comment="the conjunction of each subset of a same set is the empty set" org.eventb.core.label="axm4" org.eventb.core.predicate="cleaners ∩ roomIds = ∅"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="axm5" org.eventb.core.predicate="officers ∩ roomIds = ∅"/>
 <org.eventb.core.axiom name=":" org.eventb.core.label="axm6" org.eventb.core.predicate="cleaners ∩ officers = ∅"/>
 <org.eventb.core.axiom name=";" org.eventb.core.comment="We'll do the same for Rooms" org.eventb.core.label="axm7" org.eventb.core.predicate="bedRooms ⊆ Rooms"/>
 <org.eventb.core.axiom name="=" org.eventb.core.label="axm8" org.eventb.core.predicate="serviceRooms ⊆ Rooms"/>
 <org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm9" org.eventb.core.predicate="bedRooms ∩ serviceRooms = ∅"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="@" org.eventb.core.comment="Card id for cleaners" org.eventb.core.identifier="cleaners"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="A" org.eventb.core.comment="Card id for officers" org.eventb.core.identifier="officers"/>
-<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="B" org.eventb.core.comment="Card id for customers" org.eventb.core.identifier="customers"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="B" org.eventb.core.comment="Card id for customers" org.eventb.core.identifier="roomIds"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="C" org.eventb.core.comment="Something like swimmingpool" org.eventb.core.identifier="serviceRooms"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="D" org.eventb.core.comment="Where you sleep" org.eventb.core.identifier="bedRooms"/>
+<org.eventb.core.constant name="E" org.eventb.core.comment="Tell which cardId unlock which Rooms" org.eventb.core.identifier="unlock"/>
+<org.eventb.core.axiom name="F" org.eventb.core.label="axm10" org.eventb.core.predicate="∀x · x ∈ cleaners ⇒ unlock(x) = Rooms  "/>
+<org.eventb.core.axiom name="G" org.eventb.core.label="axm11" org.eventb.core.predicate="∀x · x ∈ officers ⇒ unlock(x) = Rooms  "/>
+<org.eventb.core.axiom name="H" org.eventb.core.label="axm12" org.eventb.core.predicate="∀x · (∃y · y ∈ Rooms) x ∈ roomIds ⇒ unlock(x) = y"/>
 </org.eventb.core.contextFile>
