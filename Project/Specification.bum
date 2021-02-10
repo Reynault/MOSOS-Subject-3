@@ -14,13 +14,17 @@
 <org.eventb.core.event name="." org.eventb.core.comment="when a customer is paying a reservation" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="payement"/>
 <org.eventb.core.event name="/" org.eventb.core.comment="check in when a customer is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkIn"/>
 <org.eventb.core.event name="0" org.eventb.core.comment="check out when a customer is leaving a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkOut"/>
-<org.eventb.core.invariant name="3" org.eventb.core.label="inv1" org.eventb.core.predicate="reserved ∈ Rooms ⇸ Reservations "/>
-<org.eventb.core.invariant name="4" org.eventb.core.label="inv2" org.eventb.core.predicate="occupied ∈ Rooms ⇸ CardIds"/>
-<org.eventb.core.invariant name="5" org.eventb.core.label="inv3" org.eventb.core.predicate="services ∈ Reservations ⇸ Services"/>
+<org.eventb.core.invariant name="3" org.eventb.core.comment="function that fetch the reservation for a room" org.eventb.core.label="inv1" org.eventb.core.predicate="reserved ∈ bedRooms ⇸ Reservations "/>
+<org.eventb.core.invariant name="4" org.eventb.core.comment="function that fetch card ids that occupy the room" org.eventb.core.label="inv2" org.eventb.core.predicate="occupied ∈ Rooms → {CardIds}"/>
+<org.eventb.core.variable name="=" org.eventb.core.comment="services served in a service room" org.eventb.core.identifier="servedServices"/>
 <org.eventb.core.variable name="6" org.eventb.core.comment="as the name said" org.eventb.core.identifier="reservedRooms"/>
-<org.eventb.core.invariant name="7" org.eventb.core.label="inv4" org.eventb.core.predicate="reservedRooms ∈ Reservations → Rooms"/>
-<org.eventb.core.variable name="8" org.eventb.core.comment="to get the bill" org.eventb.core.identifier="bill"/>
 <org.eventb.core.variable name="9" org.eventb.core.comment="get Extra from bill" org.eventb.core.identifier="extraServices"/>
-<org.eventb.core.invariant name=":" org.eventb.core.label="inv5" org.eventb.core.predicate="extraServices ∈ Billings ⇸ Reservations"/>
-<org.eventb.core.invariant name=";" org.eventb.core.label="inv6" org.eventb.core.predicate="bill ∈ Reservations → Billings"/>
+<org.eventb.core.variable name="8" org.eventb.core.comment="to get the bill" org.eventb.core.identifier="bill"/>
+<org.eventb.core.invariant name="5" org.eventb.core.comment="function that fetch available services for a reservations" org.eventb.core.label="inv3" org.eventb.core.predicate="services ∈ Reservations ⇸ {serviceRooms}"/>
+<org.eventb.core.invariant name="&gt;" org.eventb.core.comment="function that fetch services served in a service room" org.eventb.core.label="inv7" org.eventb.core.predicate="servedServices ∈ serviceRooms → {Services}"/>
+<org.eventb.core.invariant name=":" org.eventb.core.comment="function that fetch used services from a bill" org.eventb.core.label="inv5" org.eventb.core.predicate="extraServices ∈ Billings ⇸ {Services}"/>
+<org.eventb.core.invariant name=";" org.eventb.core.comment="function that fetch a bill from a reservation" org.eventb.core.label="inv6" org.eventb.core.predicate="bill ∈ Reservations → Billings"/>
+<org.eventb.core.invariant name="7" org.eventb.core.comment="function that fetch card ids for customers from a reservation " org.eventb.core.label="inv4" org.eventb.core.predicate="reservedRooms ∈ Reservations → {roomIds}"/>
+<org.eventb.core.variable name="?" org.eventb.core.comment="to get a reservation from a roomIds (Card Ids for customers)" org.eventb.core.identifier="reservation"/>
+<org.eventb.core.invariant name="@" org.eventb.core.comment="function that fetch the reservation from a card ids" org.eventb.core.label="inv8" org.eventb.core.predicate="reservation ∈ roomIds ⇸ Reservations"/>
 </org.eventb.core.machineFile>

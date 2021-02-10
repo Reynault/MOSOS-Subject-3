@@ -20,7 +20,9 @@
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="C" org.eventb.core.comment="Something like swimmingpool" org.eventb.core.identifier="serviceRooms"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="D" org.eventb.core.comment="Where you sleep" org.eventb.core.identifier="bedRooms"/>
 <org.eventb.core.constant name="E" org.eventb.core.comment="Tell which cardId unlock which Rooms" org.eventb.core.identifier="unlock"/>
-<org.eventb.core.axiom name="F" org.eventb.core.label="axm10" org.eventb.core.predicate="∀x · x ∈ cleaners ⇒ unlock(x) = Rooms  "/>
-<org.eventb.core.axiom name="G" org.eventb.core.label="axm11" org.eventb.core.predicate="∀x · x ∈ officers ⇒ unlock(x) = Rooms  "/>
-<org.eventb.core.axiom name="H" org.eventb.core.label="axm12" org.eventb.core.predicate="∀x · (∃y · y ∈ Rooms) x ∈ roomIds ⇒ unlock(x) = y"/>
+<org.eventb.core.axiom name="J" org.eventb.core.comment="We are defining the unlock constant that will gives us a list of rooms for a card id" org.eventb.core.label="axm14" org.eventb.core.predicate="unlock ∈ CardIds → {Rooms}"/>
+<org.eventb.core.axiom name="F" org.eventb.core.comment="unlock for cleaners" org.eventb.core.label="axm10" org.eventb.core.predicate="∀x · x ∈ cleaners ⇒ unlock(x) = Rooms  "/>
+<org.eventb.core.axiom name="G" org.eventb.core.comment="unlock for officers" org.eventb.core.label="axm11" org.eventb.core.predicate="∀x · x ∈ officers ⇒ unlock(x) = Rooms  "/>
+<org.eventb.core.axiom name="I" org.eventb.core.comment="unlock for customers" org.eventb.core.label="axm13" org.eventb.core.predicate="∀x· x ∈ roomIds ⇒ unlock(x) = bedRooms"/>
+<org.eventb.core.axiom name="H" org.eventb.core.comment=" a roomIds can only open one bedroom" org.eventb.core.label="axm12" org.eventb.core.predicate="∀x·(∃y· (∀z· (x ∈ roomIds ⇒ (unlock(x) = {y} ∧ unlock(x) = {z} ⇒ y = z))))"/>
 </org.eventb.core.contextFile>

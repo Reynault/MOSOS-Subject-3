@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="26">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="26">
+<org.eventb.core.poFile org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="37">
 <org.eventb.core.poIdentifier name="Billings" org.eventb.core.type="ℙ(Billings)"/>
 <org.eventb.core.poIdentifier name="Services" org.eventb.core.type="ℙ(Services)"/>
 <org.eventb.core.poIdentifier name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
@@ -21,84 +21,109 @@
 <org.eventb.core.poPredicate name="serviceRoomz" org.eventb.core.predicate="bedRooms⊆Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#;"/>
 <org.eventb.core.poPredicate name="serviceRoom{" org.eventb.core.predicate="serviceRooms⊆Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#="/>
 <org.eventb.core.poPredicate name="serviceRoom|" org.eventb.core.predicate="bedRooms∩serviceRooms=(∅ ⦂ ℙ(Rooms))" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#&gt;"/>
-<org.eventb.core.poPredicate name="serviceRoom}" org.eventb.core.predicate="∀x⦂CardIds·x∈cleaners⇒unlock(x)=Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#F"/>
-<org.eventb.core.poPredicate name="serviceRoom~" org.eventb.core.predicate="∀x⦂CardIds·x∈officers⇒unlock(x)=Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#G"/>
+<org.eventb.core.poPredicate name="serviceRoom}" org.eventb.core.predicate="unlock∈CardIds → {Rooms}" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#J"/>
+<org.eventb.core.poPredicate name="serviceRoom~" org.eventb.core.predicate="∀x⦂CardIds·x∈cleaners⇒unlock(x)=Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#F"/>
+<org.eventb.core.poPredicate name="serviceRoon'" org.eventb.core.predicate="∀x⦂CardIds·x∈officers⇒unlock(x)=Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#G"/>
+<org.eventb.core.poPredicate name="serviceRoon(" org.eventb.core.predicate="∀x⦂CardIds·x∈roomIds⇒unlock(x)=bedRooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#I"/>
+<org.eventb.core.poPredicate name="serviceRoon)" org.eventb.core.predicate="∀x⦂CardIds·∃y⦂Rooms·∀z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}⇒y=z)" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#H"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="48">
 <org.eventb.core.poIdentifier name="reserved" org.eventb.core.type="ℙ(Rooms×Reservations)"/>
-<org.eventb.core.poIdentifier name="reservedRooms" org.eventb.core.type="ℙ(Reservations×Rooms)"/>
-<org.eventb.core.poIdentifier name="extraServices" org.eventb.core.type="ℙ(Billings×Reservations)"/>
-<org.eventb.core.poIdentifier name="services" org.eventb.core.type="ℙ(Reservations×Services)"/>
+<org.eventb.core.poIdentifier name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.poIdentifier name="reservedRooms" org.eventb.core.type="ℙ(Reservations×ℙ(CardIds))"/>
+<org.eventb.core.poIdentifier name="extraServices" org.eventb.core.type="ℙ(Billings×ℙ(Services))"/>
+<org.eventb.core.poIdentifier name="services" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
 <org.eventb.core.poIdentifier name="bill" org.eventb.core.type="ℙ(Reservations×Billings)"/>
-<org.eventb.core.poIdentifier name="occupied" org.eventb.core.type="ℙ(Rooms×CardIds)"/>
+<org.eventb.core.poIdentifier name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.poIdentifier name="servedServices" org.eventb.core.type="ℙ(Rooms×ℙ(Services))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="26">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPreservedRoomt"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Rooms×Reservations))∈Rooms ⇸ Reservations" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="48">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPservedServicet"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Rooms×Reservations))∈bedRooms ⇸ Reservations" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="26">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPreservedRoomt"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Rooms×CardIds))∈Rooms ⇸ CardIds" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="48">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPservedServicet"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Rooms×ℙ(CardIds)))∈Rooms → {CardIds}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#4"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#4"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="26">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPreservedRoomt"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Reservations×Services))∈Reservations ⇸ Services" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="48">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPservedServicet"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Reservations×ℙ(Rooms)))∈Reservations ⇸ {serviceRooms}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#5"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#5"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="26">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPreservedRoomt"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reservedRooms'∈Reservations → Rooms" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="48">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPservedServicet"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="servedServices'∈serviceRooms → {Services}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#7"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#&gt;"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="26">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPreservedRoomt"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Billings×Reservations))∈Billings ⇸ Reservations" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPservedServicet"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Billings×ℙ(Services)))∈Billings ⇸ {Services}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#:"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#:"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="26">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPreservedRoomt"/>
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPservedServicet"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bill'∈Reservations → Billings" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#;"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTreservedRoomt" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="26">
-<org.eventb.core.poIdentifier name="occupied'" org.eventb.core.type="ℙ(Rooms×CardIds)"/>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPservedServicet"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reservedRooms'∈Reservations → {roomIds}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="48">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTALLHYPservedServicet"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reservation'∈roomIds ⇸ Reservations" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTservedServicet" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="48">
+<org.eventb.core.poIdentifier name="reservation'" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.poIdentifier name="occupied'" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
 <org.eventb.core.poIdentifier name="reserved'" org.eventb.core.type="ℙ(Rooms×Reservations)"/>
-<org.eventb.core.poIdentifier name="services'" org.eventb.core.type="ℙ(Reservations×Services)"/>
-<org.eventb.core.poIdentifier name="extraServices'" org.eventb.core.type="ℙ(Billings×Reservations)"/>
-<org.eventb.core.poIdentifier name="reservedRooms'" org.eventb.core.type="ℙ(Reservations×Rooms)"/>
+<org.eventb.core.poIdentifier name="services'" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.poIdentifier name="extraServices'" org.eventb.core.type="ℙ(Billings×ℙ(Services))"/>
+<org.eventb.core.poIdentifier name="servedServices'" org.eventb.core.type="ℙ(Rooms×ℙ(Services))"/>
+<org.eventb.core.poIdentifier name="reservedRooms'" org.eventb.core.type="ℙ(Reservations×ℙ(CardIds))"/>
 <org.eventb.core.poIdentifier name="bill'" org.eventb.core.type="ℙ(Reservations×Billings)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreservedRoomt" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTIDENTreservedRoomt" org.eventb.core.poStamp="26"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreservedRoomu" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreservedRoomv" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreservedRoomw" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreservedRoomx" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26"/>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="26">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="reserved∈Rooms ⇸ Reservations" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#3"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="occupied∈Rooms ⇸ CardIds" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#4"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="services∈Reservations ⇸ Services" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#5"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="reservedRooms∈Reservations → Rooms" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#7"/>
-<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="extraServices∈Billings ⇸ Reservations" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#:"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPservedServicet" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#EVTIDENTservedServicet" org.eventb.core.poStamp="48"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPservedServiceu" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="49"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPservedServicev" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="49"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPservedServicew" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="49"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPservedServicex" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="49"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/Specification.bpo|org.eventb.core.poFile#Specification|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="reserved∈bedRooms ⇸ Reservations" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="occupied∈Rooms → {CardIds}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="services∈Reservations ⇸ {serviceRooms}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="servedServices∈serviceRooms → {Services}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#&gt;"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="extraServices∈Billings ⇸ {Services}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#:"/>
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="bill∈Reservations → Billings" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#;"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="reservedRooms∈Reservations → {roomIds}" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="reservation∈roomIds ⇸ Reservations" org.eventb.core.source="/Project/Specification.bum|org.eventb.core.machineFile#Specification|org.eventb.core.invariant#@"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
