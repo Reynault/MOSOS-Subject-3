@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="7">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poFile org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="14">
 <org.eventb.core.poIdentifier name="Billings" org.eventb.core.type="ℙ(Billings)"/>
 <org.eventb.core.poIdentifier name="Services" org.eventb.core.type="ℙ(Services)"/>
-<org.eventb.core.poIdentifier name="Customers" org.eventb.core.type="ℙ(Customers)"/>
 <org.eventb.core.poIdentifier name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
-<org.eventb.core.poIdentifier name="Officers" org.eventb.core.type="ℙ(Officers)"/>
-<org.eventb.core.poIdentifier name="Cleaners" org.eventb.core.type="ℙ(Cleaners)"/>
-<org.eventb.core.poIdentifier name="BedRooms" org.eventb.core.type="ℙ(BedRooms)"/>
 <org.eventb.core.poIdentifier name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
 <org.eventb.core.poIdentifier name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
-<org.eventb.core.poIdentifier name="ServiceRooms" org.eventb.core.type="ℙ(ServiceRooms)"/>
+<org.eventb.core.poIdentifier name="serviceRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="customers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.poIdentifier name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.poIdentifier name="officers" org.eventb.core.type="ℙ(CardIds)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cleaners⊂CardIds" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="officers⊆CardIds" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="customers⊆CardIds" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cleaners∩customers=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="officers∩customers=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cleaners∩officers=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="bedRooms⊆Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="serviceRooms⊆Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="bedRooms∩serviceRooms=(∅ ⦂ ℙ(Rooms))" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#&gt;"/>
+</org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
