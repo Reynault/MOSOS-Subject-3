@@ -1,0 +1,7 @@
+Enlever la fonction reserved qui est obsolète puisqu'on a unlock.
+
+Gérer le cas dans lequel les cleaners doivent aller dans une service room.
+
+Ajouter un invariant qui indique qu'il ne peut pas y avoir des cleaners et des clients qui occupent une pièce en même temps.
+
+Regarder si unlock peut être une variable.
