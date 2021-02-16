@@ -9,3 +9,4 @@ Comment tester les machines et comment faire ça proprement pour tester partie p
 
 Comment le mettre sur Git de manière propre ? et comment séparer proprement les fichiers
     quand on travaille à plusieurs ?
+
