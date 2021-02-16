@@ -34,4 +34,22 @@
 <org.eventb.core.psStatus name="checkOut/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="checkOut/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="checkOut/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="121" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="122" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="122" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="122" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="122" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="122" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/inv15/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="122" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="122" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="122" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addService/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="122" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="checkInOfficer/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="115" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="checkInOfficer/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="115" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="checkInOfficer/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="115" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="CheckInCleaner/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="CheckInCleaner/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="CheckInCleaner/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="CheckInCleaner/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="CheckInCleaner/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
