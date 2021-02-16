@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="36">
+<org.eventb.core.poFile org.eventb.core.poStamp="40">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="40">
 <org.eventb.core.poIdentifier name="Billings" org.eventb.core.type="ℙ(Billings)"/>
 <org.eventb.core.poIdentifier name="Services" org.eventb.core.type="ℙ(Services)"/>
 <org.eventb.core.poIdentifier name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
@@ -9,58 +9,20 @@
 <org.eventb.core.poIdentifier name="today" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
 <org.eventb.core.poIdentifier name="serviceRooms" org.eventb.core.type="ℙ(Rooms)"/>
-<org.eventb.core.poIdentifier name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
 <org.eventb.core.poIdentifier name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
 <org.eventb.core.poIdentifier name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
 <org.eventb.core.poIdentifier name="officers" org.eventb.core.type="ℙ(CardIds)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="axm11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP0"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈cleaners⇒x∈dom(unlock)∧unlock∈CardIds ⇸ ℙ(Rooms)" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#F"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#F"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP0"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="axm12/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP1"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈officers⇒x∈dom(unlock)∧unlock∈CardIds ⇸ ℙ(Rooms)" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#G"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#G"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP1"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="axm13/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP2"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈roomIds⇒x∈dom(unlock)∧unlock∈CardIds ⇸ ℙ(Rooms)" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#I"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#I"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP2"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="axm14/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP3"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈roomIds⇒x∈dom(unlock)∧unlock∈CardIds ⇸ ℙ(Rooms)" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#H"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#H"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP3"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="HYP0" org.eventb.core.parentSet="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cleaners⊆CardIds" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#5"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="officers⊆CardIds" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#6"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="roomIds⊆CardIds" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#7"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cleaners∩roomIds=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#8"/>
-<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="officers∩roomIds=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#9"/>
-<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cleaners∩officers=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#:"/>
-<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="bedRooms⊆Rooms" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#;"/>
-<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="serviceRooms⊆Rooms" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#="/>
-<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="bedRooms∩serviceRooms=(∅ ⦂ ℙ(Rooms))" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#&gt;"/>
-<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="unlock∈CardIds → {Rooms}" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#J"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYP1" org.eventb.core.parentSet="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP0" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="∀x⦂CardIds·x∈cleaners⇒unlock(x)=Rooms" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#F"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYP2" org.eventb.core.parentSet="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP1" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="∀x⦂CardIds·x∈officers⇒unlock(x)=Rooms" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#G"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYP3" org.eventb.core.parentSet="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP2" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="∀x⦂CardIds·x∈roomIds⇒unlock(x)=bedRooms" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#I"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Test/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#HYP3" org.eventb.core.poStamp="36">
-<org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="∀x⦂CardIds·∃y⦂Rooms·∀z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}⇒y=z)" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#H"/>
-<org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="today∈ℕ" org.eventb.core.source="/Test/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#L"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/MainContext.bpo|org.eventb.core.poFile#MainContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="40">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cleaners⊆CardIds" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="officers⊆CardIds" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="roomIds⊆CardIds" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cleaners∩roomIds=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="officers∩roomIds=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cleaners∩officers=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="bedRooms⊆Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="serviceRooms⊆Rooms" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="bedRooms∩serviceRooms=(∅ ⦂ ℙ(Rooms))" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#&gt;"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="today∈ℕ" org.eventb.core.source="/Project/MainContext.buc|org.eventb.core.contextFile#MainContext|org.eventb.core.axiom#L"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

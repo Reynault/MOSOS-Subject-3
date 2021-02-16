@@ -21,7 +21,7 @@
 <org.eventb.core.guard name="-" org.eventb.core.comment="the customer must not already be in the room" org.eventb.core.label="grd4" org.eventb.core.predicate="cardId ∉ occupied(room)"/>
 <org.eventb.core.guard name="." org.eventb.core.comment="cleaners must not clean the room" org.eventb.core.label="grd5" org.eventb.core.predicate="∀x· x ∈ occupied(room) ∧ x ∉ cleaners"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="occupied(room) ≔ occupied(room) ∪ {cardId}" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="0" org.eventb.core.comment="is the reservation expired" org.eventb.core.label="grd6" org.eventb.core.predicate="∃x·(x = reservation(cardId) ∧ beginning(x) &lt; today ∧ ending(x) &gt; today)"/>
+<org.eventb.core.guard name="0" org.eventb.core.comment="is the reservation valid" org.eventb.core.label="grd6" org.eventb.core.predicate="∃x·(x = reservation(cardId) ∧ beginning(x) ≤ today ∧ ending(x) ≥ today)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="0" org.eventb.core.comment="check out when a customer is leaving a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkOut"/>
 <org.eventb.core.variable name="?" org.eventb.core.comment="to get a reservation from a roomIds (Card Ids for customers)" org.eventb.core.identifier="reservation"/>
@@ -51,4 +51,10 @@
 <org.eventb.core.variable name="8" org.eventb.core.comment="to get the bill" org.eventb.core.identifier="bill"/>
 <org.eventb.core.invariant name="N" org.eventb.core.comment="we want the starting date to be lower than the ending one" org.eventb.core.label="inv10" org.eventb.core.predicate="∀x·(x ∈ Reservations ⇒ (beginning(x) &lt; ending(x)))"/>
 <org.eventb.core.invariant name="O" org.eventb.core.comment="a cleaner can't be in the same room as a customer" org.eventb.core.label="inv11" org.eventb.core.predicate="∀x·(x ∈ Rooms ⇒ ∀y·(y ∈ occupied(x) ⇒ (y ∈ cleaners ∨ y ∈ (officers ∪ roomIds))))"/>
+<org.eventb.core.variable name="P" org.eventb.core.comment="tell which cardId unlock which Rooms" org.eventb.core.identifier="unlock"/>
+<org.eventb.core.invariant name="Q" org.eventb.core.comment="we are defining the unlock constant that will gives us a list of rooms for a card id" org.eventb.core.label="inv12" org.eventb.core.predicate="unlock ∈ CardIds → {Rooms}"/>
+<org.eventb.core.invariant name="R" org.eventb.core.comment="unlock for cleaners" org.eventb.core.label="inv13" org.eventb.core.predicate="∀x · x ∈ cleaners ⇒ unlock(x) = Rooms  "/>
+<org.eventb.core.invariant name="S" org.eventb.core.comment="unlock for officers" org.eventb.core.label="inv14" org.eventb.core.predicate="∀x · x ∈ officers ⇒ unlock(x) = Rooms  "/>
+<org.eventb.core.invariant name="U" org.eventb.core.comment=" a roomIds can only open one bedroom" org.eventb.core.label="inv15" org.eventb.core.predicate="∀x·(∀y· (∀z· (x ∈ roomIds ⇒ ((unlock(x) = {y} ∧ unlock(x) = {z} ∧ y ∈ bedRooms ∧ z ∈ bedRooms) ⇒ y = z))))"/>
+<org.eventb.core.invariant name="V" org.eventb.core.comment="a roomIds must be able to open service rooms from the reservation of the customer" org.eventb.core.label="inv16" org.eventb.core.predicate="∀x·(∃y· (x ∈ roomIds ∧ x ∈ dom(reservation) ∧ y = reservation(x)) ⇒ (reservedServices(y) ⊆ unlock(x)))"/>
 </org.eventb.core.machineFile>
