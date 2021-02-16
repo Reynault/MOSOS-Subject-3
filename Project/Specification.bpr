@@ -2235,4 +2235,591 @@
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="checkOut/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CardIds,Rooms">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p20">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p20" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p21">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="cardId" org.eventb.core.type="CardIds"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀x⦂Rooms,y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds">
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="cleaners⊆CardIds">
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="unlock∈CardIds → {Rooms}"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀x⦂CardIds·∃y⦂Reservations·x∈roomIds∧x∈dom(reservation)∧y=reservation(x)⇒reservedServices(y)⊆unlock(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.prIdent name="reservedServices" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="room∈Rooms">
+<org.eventb.core.prIdent name="room" org.eventb.core.type="Rooms"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="unlock∈CardIds ⇸ ℙ(Rooms)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀x⦂CardIds·∀y⦂Rooms·∀z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)">
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀x⦂Rooms·⊤⇒(∀y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds)">
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀x⦂Reservations·x∈Reservations⇒beginning(x)&lt;ending(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cardId∈dom(unlock)∧unlock∈CardIds ⇸ ℙ(Rooms)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="officers⊆CardIds">
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀x⦂CardIds,y⦂Rooms,z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)">
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="cardId∈CardIds"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="cardId∈dom(unlock)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="bedRooms⊆Rooms">
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="serviceRooms⊆Rooms">
+<org.eventb.core.prIdent name="serviceRooms" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀x⦂Rooms·x∈Rooms⇒(∀y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds)">
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀x⦂CardIds·x∈roomIds∧x∈dom(reservation)∧(∀y⦂Reservations·y=reservation(x))⇒(∃y⦂Reservations·reservedServices(y)⊆unlock(x))">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.prIdent name="reservedServices" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="roomIds⊆CardIds">
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀x⦂Reservations·⊤⇒beginning(x)&lt;ending(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀x⦂Reservations·beginning(x)&lt;ending(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="CardIds"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="checkOut/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CardIds,Rooms">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p20">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="room" org.eventb.core.type="Rooms"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀x⦂Rooms,y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds">
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="cleaners⊆CardIds">
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="occupied∈Rooms ⇸ ℙ(CardIds)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀x⦂CardIds·∃y⦂Reservations·x∈roomIds∧x∈dom(reservation)∧y=reservation(x)⇒reservedServices(y)⊆unlock(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.prIdent name="reservedServices" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="room∈Rooms"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀x⦂CardIds·∀y⦂Rooms·∀z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)">
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀x⦂Rooms·⊤⇒(∀y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds)">
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀x⦂Reservations·x∈Reservations⇒beginning(x)&lt;ending(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="room∈dom(occupied)∧occupied∈Rooms ⇸ ℙ(CardIds)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="officers⊆CardIds">
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀x⦂CardIds,y⦂Rooms,z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)">
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="occupied∈Rooms → {CardIds}"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="room∈dom(occupied)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="bedRooms⊆Rooms">
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="serviceRooms⊆Rooms">
+<org.eventb.core.prIdent name="serviceRooms" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀x⦂Rooms·x∈Rooms⇒(∀y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds)">
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀x⦂CardIds·x∈roomIds∧x∈dom(reservation)∧(∀y⦂Reservations·y=reservation(x))⇒(∃y⦂Reservations·reservedServices(y)⊆unlock(x))">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.prIdent name="reservedServices" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="roomIds⊆CardIds">
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀x⦂Reservations·⊤⇒beginning(x)&lt;ending(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀x⦂Reservations·beginning(x)&lt;ending(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="Rooms"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="checkOut/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀x⦂Rooms,y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="cleaners⊆CardIds">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀x⦂CardIds·∃y⦂Reservations·x∈roomIds∧x∈dom(reservation)∧y=reservation(x)⇒reservedServices(y)⊆unlock(x)">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.prIdent name="reservedServices" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="room∈Rooms">
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="room" org.eventb.core.type="Rooms"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂CardIds·∀y⦂Rooms·∀z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀x⦂Rooms·⊤⇒(∀y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds)">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀x⦂Reservations·x∈Reservations⇒beginning(x)&lt;ending(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="officers⊆CardIds">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀x⦂CardIds,y⦂Rooms,z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="bedRooms⊆Rooms">
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="serviceRooms⊆Rooms">
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="serviceRooms" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀x⦂Rooms·x∈Rooms⇒(∀y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds)">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀x⦂CardIds·x∈roomIds∧x∈dom(reservation)∧(∀y⦂Reservations·y=reservation(x))⇒(∃y⦂Reservations·reservedServices(y)⊆unlock(x))">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.prIdent name="reservedServices" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="roomIds⊆CardIds">
+<org.eventb.core.prIdent name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀x⦂Reservations·⊤⇒beginning(x)&lt;ending(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀x⦂Reservations·beginning(x)&lt;ending(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="checkOut/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x,y" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28" org.eventb.core.prSets="Billings,CardIds,Reservations,Rooms,Services">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p39">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p31"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p32"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p33"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p34"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p35"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p38"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p39" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p42">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p36" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x,y)" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p43">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Rooms"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="CardIds"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p45" org.eventb.core.prHyps="p44">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ovr in (occupied{room ↦ occupied(room) ∖ {cardId}})(x)" org.eventb.core.prHyps="p44">
+<org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p46,p47">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p44"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p45" org.eventb.core.prHyps="p25,p11,p20,p24,p6,p14,p10,p21,p15,p12,p18,p17,p7,p27,p2,p22,p1,p19,p13,p23,p5,p28,p26,p3,p29,p30,p40,p41,p46,p47">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p48,p49">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p44"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Functional image simplification in hyp" org.eventb.core.prHyps="p12">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p49" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p50"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p50"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p45" org.eventb.core.prHyps="p25,p11,p20,p24,p6,p14,p10,p21,p15,p12,p18,p17,p7,p27,p2,p22,p1,p19,p13,p23,p5,p28,p26,p3,p29,p30,p40,p41,p48,p50">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="beginning" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="bill" org.eventb.core.type="ℙ(Reservations×Billings)"/>
+<org.eventb.core.prIdent name="cardId" org.eventb.core.type="CardIds"/>
+<org.eventb.core.prIdent name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="ending" org.eventb.core.type="ℙ(Reservations×ℤ)"/>
+<org.eventb.core.prIdent name="extraServices" org.eventb.core.type="ℙ(Billings×ℙ(Services))"/>
+<org.eventb.core.prIdent name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.prIdent name="reservedRooms" org.eventb.core.type="ℙ(Reservations×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="reservedServices" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.prIdent name="room" org.eventb.core.type="Rooms"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="servedServices" org.eventb.core.type="ℙ(Rooms×ℙ(Services))"/>
+<org.eventb.core.prIdent name="serviceRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="today" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀x⦂Rooms,y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀x⦂CardIds·x∈officers⇒unlock(x)=Rooms"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="y∈cleaners∨y∈officers∪roomIds">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="CardIds"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="unlock∈CardIds → {Rooms}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀x⦂CardIds·∃y⦂Reservations·x∈roomIds∧x∈dom(reservation)∧y=reservation(x)⇒reservedServices(y)⊆unlock(x)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="today∈ℕ"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀x⦂CardIds·∀y⦂Rooms·∀z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀x⦂Rooms·⊤⇒(∀y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="occupied∈Rooms → {CardIds}"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="reservation∈roomIds ⇸ Reservations"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="ending∈Reservations → ℕ"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="servedServices∈serviceRooms → {Services}"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="roomIds⊆CardIds"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀x⦂Reservations·beginning(x)&lt;ending(x)"/>
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="y∈occupied(x)">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Rooms"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="CardIds"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="x=room">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Rooms"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="y∈({room} ⩤ occupied)(x)">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Rooms"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="CardIds"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="cleaners∩officers=(∅ ⦂ ℙ(CardIds))"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀x⦂Rooms·⊤⇒(∀y⦂CardIds·y∈(occupied{room ↦ occupied(room) ∖ {cardId}})(x)⇒y∈cleaners∨y∈officers∪roomIds)"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="y∈(occupied{room ↦ occupied(room) ∖ {cardId}})(x)⇒y∈cleaners∨y∈officers∪roomIds">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Rooms"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="CardIds"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="officers⊆CardIds"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="bedRooms∩serviceRooms=(∅ ⦂ ℙ(Rooms))"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="cleaners∩roomIds=(∅ ⦂ ℙ(CardIds))"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="cardId∈occupied(room)"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀x⦂Reservations·⊤⇒beginning(x)&lt;ending(x)"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="cleaners⊆CardIds"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="¬x=room">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Rooms"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="occupied∈Rooms ⇸ ℙ(CardIds)"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="room∈Rooms"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="unlock∈CardIds ⇸ ℙ(Rooms)"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="∀x⦂Rooms,y⦂CardIds·y∈(occupied{room ↦ occupied(room) ∖ {cardId}})(x)⇒y∈cleaners∨y∈officers∪roomIds"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="extraServices∈Billings ⇸ {Services}"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀x⦂Reservations·x∈Reservations⇒beginning(x)&lt;ending(x)"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="y∈(occupied{room ↦ occupied(room) ∖ {cardId}})(x)">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="Rooms"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="CardIds"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="y∈occupied(room) ∖ {cardId}">
+<org.eventb.core.prIdent name="y" org.eventb.core.type="CardIds"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="reservedRooms∈Reservations → {roomIds}"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="officers∩roomIds=(∅ ⦂ ℙ(CardIds))"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="room∈unlock(cardId)"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="bedRooms⊆Rooms"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀x⦂Rooms·x∈Rooms⇒(∀y⦂CardIds·y∈occupied(x)⇒y∈cleaners∨y∈officers∪roomIds)"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="∀x⦂CardIds·x∈roomIds∧x∈dom(reservation)∧(∀y⦂Reservations·y=reservation(x))⇒(∃y⦂Reservations·reservedServices(y)⊆unlock(x))"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="reservedServices∈Reservations ⇸ {serviceRooms}"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="cardId∈roomIds"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="beginning∈Reservations → ℕ"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="∀x⦂CardIds·x∈cleaners⇒unlock(x)=Rooms"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀x⦂CardIds,y⦂Rooms,z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="cardId∈dom(unlock)"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="room∈dom(occupied)"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="bill∈Reservations → Billings"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="serviceRooms⊆Rooms"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Rooms·x∈Rooms⇒(∀y⦂CardIds·y∈(occupied{room ↦ occupied(room) ∖ {cardId}})(x)⇒y∈cleaners∨y∈officers∪roomIds)"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.funImgSimplifies:0"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.funOvr:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="checkOut/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="CardIds,Rooms">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="occupied" org.eventb.core.type="ℙ(Rooms×ℙ(CardIds))"/>
+<org.eventb.core.prIdent name="room" org.eventb.core.type="Rooms"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤∧⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="occupied∈Rooms ⇸ ℙ(CardIds)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀x⦂CardIds,y⦂Rooms,z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)">
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀x⦂CardIds·∃y⦂Reservations·x∈roomIds∧x∈dom(reservation)∧y=reservation(x)⇒reservedServices(y)⊆unlock(x)">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.prIdent name="reservedServices" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="room∈dom(occupied)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀x⦂CardIds·∀y⦂Rooms·∀z⦂Rooms·x∈roomIds⇒(unlock(x)={y}∧unlock(x)={z}∧y∈bedRooms∧z∈bedRooms⇒y=z)">
+<org.eventb.core.prIdent name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀x⦂CardIds·x∈roomIds∧x∈dom(reservation)∧(∀y⦂Reservations·y=reservation(x))⇒(∃y⦂Reservations·reservedServices(y)⊆unlock(x))">
+<org.eventb.core.prIdent name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.prIdent name="reservation" org.eventb.core.type="ℙ(CardIds×Reservations)"/>
+<org.eventb.core.prIdent name="reservedServices" org.eventb.core.type="ℙ(Reservations×ℙ(Rooms))"/>
+<org.eventb.core.prIdent name="roomIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.prIdent name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="room∈dom(occupied)∧occupied∈Rooms ⇸ ℙ(CardIds)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>
