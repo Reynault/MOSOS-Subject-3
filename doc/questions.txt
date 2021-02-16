@@ -4,3 +4,8 @@ Doit-on faire du raffinement ? et si oui comment ?
 
 C'est quoi la différence entre fonction totale et fonction partiel ?
     Quand employer des fonctions partielles ?
+
+Comment tester les machines et comment faire ça proprement pour tester partie par partie ?
+
+Comment le mettre sur Git de manière propre ? et comment séparer proprement les fichiers
+    quand on travaille à plusieurs ?
