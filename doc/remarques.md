@@ -1,0 +1,6 @@
+- Enlever la fonction reserved qui est obsolète puisqu'on a unlock.
+- Ajouter un invariant qui indique qu'il ne peut pas y avoir des cleaners et des clients qui occupent une pièce en même temps.
+- Regarder si unlock peut être une variable, puisqu'on peut supposer que les cartes sont configurables, et ne sont pas liées à une chambre pour toujours.
+- les événements check in/out et check in/out service ne sont pas différents donc j'ai enlevé check in/out service
+- Il faut une date de départ et une date de fin' pour une réservation, donc il faut ajouter une fonction qui permet de les retrouver
+- Pareil pour le nom d'un cleaner mais je l'ai pas fait pour l'instant parce que on l'utilise jamais dans les événements
