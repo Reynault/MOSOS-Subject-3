@@ -7,13 +7,13 @@
 <org.eventb.core.carrierSet name="4" org.eventb.core.comment="For those who paid further" org.eventb.core.identifier="Billings"/>
 <org.eventb.core.axiom name="5" org.eventb.core.comment="we are separating each set in subset like Cards' id (Officers, cleaners, Customers have differents id)" org.eventb.core.label="axm1" org.eventb.core.predicate="cleaners ⊆ CardIds"/>
 <org.eventb.core.axiom name="6" org.eventb.core.label="axm2" org.eventb.core.predicate="officers ⊆ CardIds"/>
-<org.eventb.core.axiom name="7" org.eventb.core.label="axm3" org.eventb.core.predicate="roomIds ⊆ CardIds"/>
-<org.eventb.core.axiom name="8" org.eventb.core.comment="the conjunction of each subset of a same set is the empty set" org.eventb.core.label="axm4" org.eventb.core.predicate="cleaners ∩ roomIds = ∅"/>
-<org.eventb.core.axiom name="9" org.eventb.core.label="axm5" org.eventb.core.predicate="officers ∩ roomIds = ∅"/>
+<org.eventb.core.axiom name="7" org.eventb.core.label="axm3" org.eventb.core.predicate="customers ⊆ CardIds"/>
+<org.eventb.core.axiom name="8" org.eventb.core.comment="the conjunction of each subset of a same set is the empty set" org.eventb.core.label="axm4" org.eventb.core.predicate="cleaners ∩ customers = ∅"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="axm5" org.eventb.core.predicate="officers ∩ customers = ∅"/>
 <org.eventb.core.axiom name=":" org.eventb.core.label="axm6" org.eventb.core.predicate="cleaners ∩ officers = ∅"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="@" org.eventb.core.comment="card id for cleaners" org.eventb.core.identifier="cleaners"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="A" org.eventb.core.comment="card id for officers" org.eventb.core.identifier="officers"/>
-<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="B" org.eventb.core.comment="card id for customers" org.eventb.core.identifier="roomIds"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="B" org.eventb.core.comment="card id for customers" org.eventb.core.identifier="customers"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="D" org.eventb.core.comment="where you sleep" org.eventb.core.identifier="bedRooms"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="C" org.eventb.core.comment="a room that provides a service such as a restaurant" org.eventb.core.identifier="serviceRooms"/>
 <org.eventb.core.axiom name=";" org.eventb.core.comment="we'll do the same for Rooms" org.eventb.core.label="axm7" org.eventb.core.predicate="bedRooms ⊆ Rooms"/>
@@ -21,4 +21,15 @@
 <org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm9" org.eventb.core.predicate="bedRooms ∩ serviceRooms = ∅"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="K" org.eventb.core.comment="the date of today" org.eventb.core.identifier="today"/>
 <org.eventb.core.axiom name="L" org.eventb.core.comment="The date is represented by a natural" org.eventb.core.label="axm10" org.eventb.core.predicate="today ∈ ℕ"/>
+<org.eventb.core.carrierSet name="M" org.eventb.core.comment="modeling the lock for a door" org.eventb.core.identifier="Doors"/>
+<org.eventb.core.carrierSet name="N" org.eventb.core.comment="moeling a state of a door, it can be locked, unlocked, always unlocked in case of emergencies" org.eventb.core.identifier="State"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="O" org.eventb.core.comment="locked when it's closed" org.eventb.core.identifier="locked"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="P" org.eventb.core.comment="unlocked when someone used his card to unlock it" org.eventb.core.identifier="unlocked"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="Q" org.eventb.core.comment="always unlocked, like when an emergency occur" org.eventb.core.identifier="always_unlocked"/>
+<org.eventb.core.axiom name="R" org.eventb.core.comment="State is composed of locked, unlocked and always unlocked" org.eventb.core.label="axm11" org.eventb.core.predicate="partition(State, {locked, unlocked, always_unlocked})"/>
+<org.eventb.core.axiom name="S" org.eventb.core.comment="a room can have multiple doors" org.eventb.core.label="axm12" org.eventb.core.predicate="getDoors ∈ Rooms → {Doors}"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="T" org.eventb.core.comment="function to get the doors of a room" org.eventb.core.identifier="getDoors"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="U" org.eventb.core.comment="function to get the room from a door" org.eventb.core.identifier="getRoom"/>
+<org.eventb.core.axiom name="V" org.eventb.core.comment="a door is linked to a single room" org.eventb.core.label="axm13" org.eventb.core.predicate="getRoom ∈ Doors → Rooms"/>
+<org.eventb.core.axiom name="W" org.eventb.core.comment="every room has at least one door" org.eventb.core.label="axm14" org.eventb.core.predicate="∀x· (x ∈ Rooms ⇒ ∃y· (y ∈ Doors ∧ getDoors(x) = {y} ∧ getRoom(y) = x))"/>
 </org.eventb.core.contextFile>
