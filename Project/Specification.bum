@@ -43,11 +43,34 @@
 <org.eventb.core.invariant name=":" org.eventb.core.comment="function that fetch used services from a bill" org.eventb.core.label="inv8" org.eventb.core.predicate="extraServices ∈ Billings ⇸ {Services}"/>
 <org.eventb.core.invariant name=";" org.eventb.core.comment="function that fetch a bill from a reservation" org.eventb.core.label="inv9" org.eventb.core.predicate="bill ∈ Reservations → Billings"/>
 <org.eventb.core.variable name="6" org.eventb.core.comment="as the name said" org.eventb.core.identifier="reservedRooms"/>
-<org.eventb.core.event name="C" org.eventb.core.comment="add a service to a bill for a customer" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addService"/>
-<org.eventb.core.event name="D" org.eventb.core.comment="check out when an officer is going leaving a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkOutOfficer"/>
-<org.eventb.core.event name="E" org.eventb.core.comment="check in when an officer is going inside a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkInOfficer"/>
-<org.eventb.core.event name="F" org.eventb.core.comment="check out when a cleaner is going leaving a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CheckOutCleaner"/>
-<org.eventb.core.event name="G" org.eventb.core.comment="check in when a cleaner is going inside a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CheckInCleaner"/>
+<org.eventb.core.event name="C" org.eventb.core.comment="add a service to a bill for a customer" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addService">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="A service" org.eventb.core.identifier="service"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment="A reservation" org.eventb.core.identifier="res"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="service is a Service" org.eventb.core.label="grd1" org.eventb.core.predicate="service ∈ serviceRooms"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="res is a Reservation" org.eventb.core.label="grd2" org.eventb.core.predicate="res ∈ Reservations"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="Those trying to get a service are customers" org.eventb.core.label="grd3" org.eventb.core.predicate="cardId ∈ roomIds"/>
+<org.eventb.core.parameter name="," org.eventb.core.comment="A card" org.eventb.core.identifier="cardId"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="unlock(cardId) ≔ unlock(cardId) ∪ {service}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="." org.eventb.core.comment="The service is not reserved" org.eventb.core.label="grd4" org.eventb.core.predicate="service ∉ unlock(cardId)"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="reservedRooms(res) ≔ reservedRooms(res) ∪ { cardId }" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="cardId ∉ reservedRooms(res)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.comment="check in when an officer is going inside a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkInOfficer">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="Card Id that is entering the room" org.eventb.core.identifier="cardId"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment="room being entered" org.eventb.core.identifier="room"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="card is an officer, officer can go anywhere any time" org.eventb.core.label="grd1" org.eventb.core.predicate="cardId ∈ officers"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="room is a room" org.eventb.core.label="grd2" org.eventb.core.predicate="room ∈ Rooms"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="occupied(room) ≔ occupied(room) ∪ {cardId}" org.eventb.core.comment="Now the officer is in the room" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.comment="check in when a cleaner is going inside a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CheckInCleaner">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="a card" org.eventb.core.identifier="cardId"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment="a room" org.eventb.core.identifier="room"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="card is a cleaner" org.eventb.core.label="grd1" org.eventb.core.predicate="cardId ∈ cleaners"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="room is a Room" org.eventb.core.label="grd2" org.eventb.core.predicate="room ∈ Rooms"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="cleaner's already not in the room" org.eventb.core.label="grd3" org.eventb.core.predicate="cardId ∉ occupied(room)"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="Cleaner can only go in the room if there are no one but cleaners" org.eventb.core.label="grd4" org.eventb.core.predicate="∀x· x ∈ occupied(room) ∧ x ∈ cleaners"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="occupied(room) ≔ occupied(room) ∪ {cardId}" org.eventb.core.comment="Now the cleaner is in the room" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
 <org.eventb.core.event name="H" org.eventb.core.comment="when an emergency alarm is set off" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setAlarmOff"/>
 <org.eventb.core.event name="I" org.eventb.core.comment="when an emergency alarm is set on" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setAlarmOn"/>
 <org.eventb.core.variable name="J" org.eventb.core.comment="the beginning of a reservation" org.eventb.core.identifier="beginning"/>
