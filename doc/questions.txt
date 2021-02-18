@@ -2,11 +2,10 @@ Y a t'il une différence entre les services (restaurants etc.) et les extra-serv
 
 Doit-on faire du raffinement ? et si oui comment ?
 
-C'est quoi la différence entre fonction totale et fonction partiel ?
-    Quand employer des fonctions partielles ?
+C'est quoi la différence entre fonction totale et fonction partiel ? Quand employer des fonctions partielles ?
 
-Comment tester les machines et comment faire ça proprement pour tester partie par partie ?
+Comment tester les machines et comment faire ça proprement pour tester partie par partie ? Comment faire les preuves ?
 
-Comment le mettre sur Git de manière propre ? et comment séparer proprement les fichiers
-    quand on travaille à plusieurs ?
+Comment mettre le projet sur Git de manière propre ? et comment séparer proprement les fichiers quand on travaille à plusieurs ? (Plusieurs machines etc.)
 
+Comment on fait pour faire des animations / initialiser toutes les valeurs utilisées pour tester le programme ? (Date de début et de fin pour un événement etc.)

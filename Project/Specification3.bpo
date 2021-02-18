@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="65">
+<org.eventb.core.poFile org.eventb.core.poStamp="68">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="29">
 <org.eventb.core.poIdentifier name="State" org.eventb.core.type="ℙ(State)"/>
 <org.eventb.core.poIdentifier name="Billings" org.eventb.core.type="ℙ(Billings)"/>
@@ -244,7 +244,7 @@
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPreservedServicet" org.eventb.core.parentSet="/Project/Specification3.bpo|org.eventb.core.poFile#Specification3|org.eventb.core.poPredicateSet#EVTIDENTreservedServicet" org.eventb.core.poStamp="55"/>
 <org.eventb.core.poPredicateSet name="EVTALLHYPreservedServiceu" org.eventb.core.parentSet="/Project/Specification3.bpo|org.eventb.core.poFile#Specification3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="55"/>
-<org.eventb.core.poSequent name="payement/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="65">
+<org.eventb.core.poSequent name="payement/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="68">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification3.bpo|org.eventb.core.poFile#Specification3|org.eventb.core.poPredicateSet#EVTHYPreservedServicev'"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂Rooms·x∈beds⇒x∈dom(isReserved)∧isReserved∈Rooms ⇸ ℤ" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#:"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#:"/>
@@ -259,12 +259,12 @@
 <org.eventb.core.poPredicateSet name="EVTHYPreservedServicev'" org.eventb.core.parentSet="/Project/Specification3.bpo|org.eventb.core.poFile#Specification3|org.eventb.core.poPredicateSet#EVTIDENTreservedServicev" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="beds⊆bedRooms" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#9"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreservedServicev" org.eventb.core.parentSet="/Project/Specification3.bpo|org.eventb.core.poFile#Specification3|org.eventb.core.poPredicateSet#EVTHYPreservedServicev'" org.eventb.core.poStamp="64">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreservedServicev" org.eventb.core.parentSet="/Project/Specification3.bpo|org.eventb.core.poFile#Specification3|org.eventb.core.poPredicateSet#EVTHYPreservedServicev'" org.eventb.core.poStamp="66">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀x⦂Rooms·x∈beds⇒isReserved(x)=0" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#:"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="begin∈ℕ" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#5"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="end∈ℕ" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#6"/>
-<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="begin&lt;end" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#8"/>
-<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="services⊆serviceRooms" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#7"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="services⊆serviceRooms" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#7"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="begin&lt;end" org.eventb.core.source="/Project/Specification3.bum|org.eventb.core.machineFile#Specification3|org.eventb.core.event#.|org.eventb.core.guard#8"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="checkIn/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="55">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/Specification3.bpo|org.eventb.core.poFile#Specification3|org.eventb.core.poPredicateSet#EVTHYPreservedServicew("/>

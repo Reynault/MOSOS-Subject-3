@@ -24,7 +24,7 @@
 <org.eventb.core.psStatus name="INITIALISATION/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv17/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv18/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="payement/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="65" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="payement/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="68" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="checkIn/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="checkIn/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="checkIn/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>

@@ -25,8 +25,8 @@
 <org.eventb.core.guard name=":" org.eventb.core.comment="the bedrooms must be free" org.eventb.core.label="grd2" org.eventb.core.predicate="∀x· x ∈ beds ⇒ isReserved(x) = 0"/>
 <org.eventb.core.guard name="5" org.eventb.core.label="grd3" org.eventb.core.predicate="begin ∈ ℕ"/>
 <org.eventb.core.guard name="6" org.eventb.core.label="grd4" org.eventb.core.predicate="end ∈ ℕ"/>
-<org.eventb.core.guard name="8" org.eventb.core.comment="beginning and ending dates must be coherent" org.eventb.core.label="grd6" org.eventb.core.predicate="begin &lt; end"/>
 <org.eventb.core.guard name="7" org.eventb.core.label="grd5" org.eventb.core.predicate="services ⊆ serviceRooms"/>
+<org.eventb.core.guard name="8" org.eventb.core.comment="beginning and ending dates must be coherent" org.eventb.core.label="grd6" org.eventb.core.predicate="begin &lt; end"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="/" org.eventb.core.comment="check in when a customer is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkIn">
 <org.eventb.core.parameter name="'" org.eventb.core.comment="card Id that is entering the room" org.eventb.core.identifier="cardId"/>
