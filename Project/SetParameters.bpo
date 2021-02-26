@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="26">
+<org.eventb.core.poIdentifier name="State" org.eventb.core.type="ℙ(State)"/>
+<org.eventb.core.poIdentifier name="Doors" org.eventb.core.type="ℙ(Doors)"/>
+<org.eventb.core.poIdentifier name="Services" org.eventb.core.type="ℙ(Services)"/>
+<org.eventb.core.poIdentifier name="Reservations" org.eventb.core.type="ℙ(Reservations)"/>
+<org.eventb.core.poIdentifier name="CardIds" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.poIdentifier name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="Bills" org.eventb.core.type="ℙ(Bills)"/>
+<org.eventb.core.poIdentifier name="alwaysUnlocked" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="unlocked" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="today" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="serviceRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="buyFood" org.eventb.core.type="Services"/>
+<org.eventb.core.poIdentifier name="getRoom" org.eventb.core.type="ℙ(Doors×Rooms)"/>
+<org.eventb.core.poIdentifier name="customers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.poIdentifier name="bedRooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="buyADrink" org.eventb.core.type="Services"/>
+<org.eventb.core.poIdentifier name="cleaners" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.poIdentifier name="restaurant" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="locked" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="swimmingPool" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="servedServices" org.eventb.core.type="ℙ(Rooms×ℙ(Services))"/>
+<org.eventb.core.poIdentifier name="massage" org.eventb.core.type="Services"/>
+<org.eventb.core.poIdentifier name="officers" org.eventb.core.type="ℙ(CardIds)"/>
+<org.eventb.core.poPredicate name="servedServicet" org.eventb.core.predicate="cleaners⊆CardIds" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="servedServiceu" org.eventb.core.predicate="officers⊆CardIds" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="servedServicev" org.eventb.core.predicate="customers⊆CardIds" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="servedServicew" org.eventb.core.predicate="cleaners∩customers=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="servedServicex" org.eventb.core.predicate="officers∩customers=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="servedServicey" org.eventb.core.predicate="cleaners∩officers=(∅ ⦂ ℙ(CardIds))" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="servedServicez" org.eventb.core.predicate="bedRooms⊆Rooms" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="servedService{" org.eventb.core.predicate="serviceRooms⊆Rooms" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="servedService|" org.eventb.core.predicate="bedRooms∩serviceRooms=(∅ ⦂ ℙ(Rooms))" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#&gt;"/>
+<org.eventb.core.poPredicate name="servedService}" org.eventb.core.predicate="today∈ℕ" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#L"/>
+<org.eventb.core.poPredicate name="servedService~" org.eventb.core.predicate="getRoom∈Doors → Rooms" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#V"/>
+<org.eventb.core.poPredicate name="servedServicf'" org.eventb.core.predicate="∀x⦂Rooms·x∈Rooms⇒(∃y⦂Doors·y∈Doors∧getRoom(y)=x)" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#W"/>
+<org.eventb.core.poPredicate name="servedServicf(" org.eventb.core.predicate="bedRooms∪serviceRooms=Rooms" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#X"/>
+<org.eventb.core.poPredicate name="servedServicf)" org.eventb.core.predicate="cleaners∪customers∪officers=CardIds" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#Y"/>
+<org.eventb.core.poPredicate name="servedServicf*" org.eventb.core.predicate="partition(serviceRooms,{restaurant,swimmingPool})" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#\\"/>
+<org.eventb.core.poPredicate name="servedServicf+" org.eventb.core.predicate="buyADrink∈Services∧massage∈Services∧buyFood∈Services" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#`"/>
+<org.eventb.core.poPredicate name="servedServicf," org.eventb.core.predicate="locked∈State∧unlocked∈State∧alwaysUnlocked∈State" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#R"/>
+<org.eventb.core.poPredicate name="servedServicf-" org.eventb.core.predicate="servedServices∈serviceRooms → {Services}" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#b"/>
+<org.eventb.core.poPredicate name="servedServicf." org.eventb.core.predicate="servedServices(restaurant)={buyFood}" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#c"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="26"/>
+</org.eventb.core.poFile>
