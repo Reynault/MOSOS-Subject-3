@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.contextFile org.eventb.core.comment="context that initialise every parameter" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
 <org.eventb.core.extendsContext name="(" org.eventb.core.target="Context"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm1" org.eventb.core.predicate="today = 2021"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="2" org.eventb.core.identifier="restaurant"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="3" org.eventb.core.identifier="swimmingPool"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="/" org.eventb.core.identifier="buyADrink"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="0" org.eventb.core.identifier="massage"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="1" org.eventb.core.identifier="buyFood"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(serviceRooms, {restaurant, swimmingPool})"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="axm4" org.eventb.core.predicate="partition(Services, {buyADrink, massage, buyFood})"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=":" org.eventb.core.identifier="room1"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=";" org.eventb.core.identifier="room2"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="8" org.eventb.core.identifier="room3"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="9" org.eventb.core.identifier="room4"/>
+<org.eventb.core.axiom name="=" org.eventb.core.label="axm6" org.eventb.core.predicate="partition(bedRooms, {room1, room2, room3, room4})"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="&gt;" org.eventb.core.identifier="roger"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="?" org.eventb.core.identifier="bob"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="@" org.eventb.core.identifier="john"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="A" org.eventb.core.identifier="doe"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="B" org.eventb.core.identifier="rosalind"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="C" org.eventb.core.identifier="michel"/>
+<org.eventb.core.axiom name="D" org.eventb.core.label="axm7" org.eventb.core.predicate="partition(customers, {roger, bob, john, doe})"/>
+<org.eventb.core.axiom name="E" org.eventb.core.label="axm8" org.eventb.core.predicate="partition(officers, {rosalind})"/>
+<org.eventb.core.axiom name="F" org.eventb.core.label="axm9" org.eventb.core.predicate="partition(cleaners, {michel})"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="G" org.eventb.core.identifier="bill1"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="H" org.eventb.core.identifier="bill2"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="I" org.eventb.core.identifier="bill3"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="J" org.eventb.core.identifier="bill4"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="K" org.eventb.core.identifier="door1"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="L" org.eventb.core.identifier="door2"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="M" org.eventb.core.identifier="door3"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="N" org.eventb.core.identifier="door4"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="O" org.eventb.core.identifier="door5"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="P" org.eventb.core.identifier="door6"/>
+<org.eventb.core.axiom name="Q" org.eventb.core.label="axm10" org.eventb.core.predicate="partition(Bills, {bill1, bill2, bill3, bill4})"/>
+<org.eventb.core.axiom name="R" org.eventb.core.label="axm11" org.eventb.core.predicate="partition(Doors, {door1, door2, door3, door4, door5, door6})"/>
 </org.eventb.core.contextFile>
