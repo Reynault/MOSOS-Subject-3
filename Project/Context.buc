@@ -28,7 +28,7 @@
 <org.eventb.core.axiom name="=" org.eventb.core.label="axm9" org.eventb.core.predicate="serviceRooms ⊆ Rooms"/>
 <org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm10" org.eventb.core.predicate="bedRooms ∩ serviceRooms = ∅"/>
 <org.eventb.core.axiom name="X" org.eventb.core.label="axm11" org.eventb.core.predicate="bedRooms ∪ serviceRooms = Rooms"/>
-<org.eventb.core.axiom name="b" org.eventb.core.comment="function that fetch services served in a service room" org.eventb.core.label="axm13" org.eventb.core.predicate="servedServices ∈ serviceRooms → {Services}"/>
+<org.eventb.core.axiom name="b" org.eventb.core.comment="function that fetch services served in a service room" org.eventb.core.label="axm13" org.eventb.core.predicate="servedServices ∈ serviceRooms → ℙ(Services)"/>
 <org.eventb.core.axiom name="V" org.eventb.core.comment="a door is linked to a single room" org.eventb.core.label="axm14" org.eventb.core.predicate="getRoom ∈ Doors → Rooms"/>
 <org.eventb.core.axiom name="W" org.eventb.core.comment="every room has at least one door" org.eventb.core.label="axm15" org.eventb.core.predicate="∀x· (x ∈ Rooms ⇒ ∃y· (y ∈ Doors ∧ getRoom(y) = x))"/>
 <org.eventb.core.axiom name="R" org.eventb.core.comment="State is composed of locked, unlocked and always unlocked" org.eventb.core.label="axm16" org.eventb.core.predicate="partition(State, {locked, unlocked, alwaysUnlocked})"/>

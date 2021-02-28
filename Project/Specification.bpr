@@ -752,7 +752,7 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p7,p10,p6,p12,p11,p4,p8,p13,p14,p15,p16,p23">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p7,p10,p6,p11,p12,p4,p8,p13,p14,p15,p16,p23">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -784,7 +784,8 @@
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="cleaners∪customers∪officers=CardIds"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬unlocked=alwaysUnlocked"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(Reservations×ℙ(Rooms)))∈Reservations ⇸ {serviceRooms}"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="bedRooms∪serviceRooms=Rooms"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="bedRooms∪serviceRooms=Rooms"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="servedServices∈serviceRooms → ℙ(Services)"/>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="officers⊆CardIds"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀x⦂Rooms·∃y⦂Doors·getRoom(y)=x"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="officers∩customers=(∅ ⦂ ℙ(CardIds))"/>
@@ -798,11 +799,10 @@
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="serviceRooms⊆Rooms"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬alwaysUnlocked=locked"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="customers⊆CardIds"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="servedServices∈serviceRooms → {Services}"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Rooms,Services">
 <org.eventb.core.lang name="L"/>
@@ -1063,8 +1063,8 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂Reservations·x∈Reservations⇒beginning'(x)&lt;ending'(x)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv12/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -1276,9 +1276,9 @@
 </org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv14/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="CardIds,Rooms">
 <org.eventb.core.lang name="L"/>
@@ -1389,9 +1389,9 @@
 </org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="checkIn/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CardIds,Rooms">
 <org.eventb.core.lang name="L"/>
