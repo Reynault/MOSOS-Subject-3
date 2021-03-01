@@ -34,7 +34,7 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkInOfficer"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="x" org.eventb.core.comment="when a cleaner is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkInCleaner">
-<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="toClean(room) = 1 ∨ isBeingCleaned(room) = 1"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="the cleaner enter a room to clean or help another cleaner" org.eventb.core.label="grd4" org.eventb.core.predicate="toClean(room) = 1 ∨ isBeingCleaned(room) = 1"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="toClean(room) ≔ 0" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="isBeingCleaned(room) ≔ 1" org.eventb.core.label="act3"/>
 <org.eventb.core.refinesEvent name="1" org.eventb.core.target="checkInCleaner"/>
@@ -46,7 +46,7 @@
 <org.eventb.core.invariant name="|" org.eventb.core.label="inv2" org.eventb.core.predicate="isBeingCleaned ∈ Rooms → {0,1}"/>
 <org.eventb.core.variable name="}" org.eventb.core.comment="when a room is being cleaned" org.eventb.core.identifier="isBeingCleaned"/>
 <org.eventb.core.invariant name="''" org.eventb.core.comment="when a room is being cleaned, it's not to be cleaned" org.eventb.core.label="inv3" org.eventb.core.predicate="∀x· x ∈ Rooms ∧ isBeingCleaned(x) = 1 ⇒ toClean(x) = 0"/>
-<org.eventb.core.invariant name="'*" org.eventb.core.label="inv4" org.eventb.core.predicate="∀x· x ∈ Rooms ∧ toClean(x) = 1 ⇒ isBeingCleaned(x) = 0"/>
+<org.eventb.core.invariant name="'*" org.eventb.core.comment="if it is to be cleaned then it is not being cleaned yet" org.eventb.core.label="inv4" org.eventb.core.predicate="∀x· x ∈ Rooms ∧ toClean(x) = 1 ⇒ isBeingCleaned(x) = 0"/>
 <org.eventb.core.event name="'," org.eventb.core.comment="when we set an emergency alarm on" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="setAlarmOn">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="setAlarmOn"/>
 </org.eventb.core.event>
@@ -64,13 +64,13 @@
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="room"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="room ∈ Rooms ∧ toClean(room) = 0 ∧ isBeingCleaned(room) = 0"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="toClean(room) ≔ 1" org.eventb.core.label="act1"/>
-<org.eventb.core.parameter name="+" org.eventb.core.comment="the office who is requesting a cleaning" org.eventb.core.identifier="officer"/>
+<org.eventb.core.parameter name="+" org.eventb.core.comment="the officer who is requesting a cleaning" org.eventb.core.identifier="officer"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="officer ∈ officers"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="')" org.eventb.core.comment="when a bedRoom is requested to be cleaned by a customer" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="requestCleaningClient">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="customer"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="room"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="customer ∈ customers ∧ customer ∈ reservations"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="customer ∈ reservations"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="room ∈ bedRooms ∧ room ∈ unlock(customer)"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="toClean(room) = 0 ∧ isBeingCleaned(room) = 0"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="toClean(room) ≔ 1" org.eventb.core.label="act1"/>
