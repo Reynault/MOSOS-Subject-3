@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="adding the possibility to trigger an alarm that unlock every doors" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="5_Cleaner"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="SetParameters"/>
+<org.eventb.core.variable name="n" org.eventb.core.comment="customer cards assigned to a reservation" org.eventb.core.identifier="reservations"/>
+<org.eventb.core.variable name="J" org.eventb.core.comment="the beginning of a reservation" org.eventb.core.identifier="beginning"/>
+<org.eventb.core.variable name="K" org.eventb.core.comment="the end of a reservation" org.eventb.core.identifier="ending"/>
+<org.eventb.core.variable name="P" org.eventb.core.comment="tell which cardId unlock which Rooms" org.eventb.core.identifier="unlock"/>
+<org.eventb.core.variable name="]" org.eventb.core.comment="function that check if a room is reserved" org.eventb.core.identifier="isReserved"/>
+<org.eventb.core.variable name="\" org.eventb.core.comment="function that get a state for a door" org.eventb.core.identifier="getState"/>
+<org.eventb.core.variable name="8" org.eventb.core.comment="get extra services and the price for each" org.eventb.core.identifier="getExtra"/>
+<org.eventb.core.variable name="o" org.eventb.core.comment="if a bedrooms is to be cleaned" org.eventb.core.identifier="toClean"/>
+<org.eventb.core.variable name="}" org.eventb.core.comment="when a room is being cleaned" org.eventb.core.identifier="isBeingCleaned"/>
+<org.eventb.core.event name="~" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="isAlarmOn ≔ 0" org.eventb.core.label="act10"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="''" org.eventb.core.comment="when a customer is paying a reservation" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="payement">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="payement"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'(" org.eventb.core.comment="when a customer is leaving the hotel" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="billing">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="billing"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="')" org.eventb.core.comment="when a customer is adding an extra service to his reservation" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addExtra">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="addExtra"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'*" org.eventb.core.comment="when a customer is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkIn">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkIn"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd8" org.eventb.core.predicate="isAlarmOn = 0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'+" org.eventb.core.comment="event that simulate when a customer is leaving a room (openning a door from the inside)" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkOut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkOut"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'," org.eventb.core.comment="event that simulate a door being closed" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="close"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'-" org.eventb.core.comment="when an officer is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkInOfficer">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkInOfficer"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="isAlarmOn = 0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'." org.eventb.core.comment="when a cleaner is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkInCleaner">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkInCleaner"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="isAlarmOn = 0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'/" org.eventb.core.comment="when a clean finish to clean a room" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="finishToClean">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="finishToClean"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'0" org.eventb.core.comment="when a room is requested to be cleaned" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="requestCleaning">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="requestCleaning"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'1" org.eventb.core.comment="when a bedRoom is requested to be cleaned by a customer" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="requestCleaningClient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="requestCleaningClient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'2" org.eventb.core.comment="when we set an emergency alarm off (like a fire alarm)" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setAlarmOff">
+<org.eventb.core.action name="'" org.eventb.core.assignment="isAlarmOn ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="isAlarmOn = 1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="getState ≔ Doors × {unlocked}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'3" org.eventb.core.comment="when we set an emergence alarm on" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setAlarmOn">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="isAlarmOn = 0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="isAlarmOn ≔ 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="getState ≔ Doors × {alwaysUnlocked}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="'4" org.eventb.core.comment="when an emergency alarm is on" org.eventb.core.identifier="isAlarmOn"/>
+<org.eventb.core.invariant name="'5" org.eventb.core.label="inv1" org.eventb.core.predicate="isAlarmOn ∈ {0,1}"/>
+<org.eventb.core.invariant name="'6" org.eventb.core.label="inv2" org.eventb.core.predicate="isAlarmOn = 1 ⇒ (∀x· x ∈ Doors ∧ getState(x) = alwaysUnlocked)"/>
+<org.eventb.core.invariant name="'7" org.eventb.core.label="inv3" org.eventb.core.predicate="isAlarmOn = 0 ⇒ (∀x· x ∈ Doors ∧ getState(x) ≠ alwaysUnlocked)"/>
+</org.eventb.core.machineFile>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="adding check in and check out for customers" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="1_PayementBilling"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="SetParameters"/>
+<org.eventb.core.event name="f" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="getState ≔ Doors × {locked}" org.eventb.core.comment="each door is locked" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="g" org.eventb.core.comment="when a customer is paying a reservation" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="payement">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="payement"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="h" org.eventb.core.comment="when a customer is leaving the hotel" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="billing">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="billing"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="i" org.eventb.core.comment="when a customer is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkIn">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="customer"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="door"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="room"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="getState(door) ≔ unlocked" org.eventb.core.comment="then we open the door" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd1" org.eventb.core.predicate="customer ∈ customers ∧ door ∈ Doors ∧ room ∈ Rooms"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="the customer must have a reservation" org.eventb.core.label="grd2" org.eventb.core.predicate="customer ∈ reservations"/>
+<org.eventb.core.guard name="2" org.eventb.core.comment="the room is the one linked to the door" org.eventb.core.label="grd3" org.eventb.core.predicate="room = getRoom(door)"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="the room must be unlocked by the customer" org.eventb.core.label="grd4" org.eventb.core.predicate="room ∈ unlock(customer)"/>
+<org.eventb.core.guard name="/" org.eventb.core.comment="is the reservation still available" org.eventb.core.label="grd5" org.eventb.core.predicate="beginning(customer) ≤ today ∧ ending(customer) ≥ today"/>
+<org.eventb.core.guard name="1" org.eventb.core.comment="the door must be locked" org.eventb.core.label="grd6" org.eventb.core.predicate="getState(door) = locked"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="k" org.eventb.core.comment="event that simulate when a customer is leaving a room (openning a door from the inside)" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkOut">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="door"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="the door to unlock" org.eventb.core.label="grd1" org.eventb.core.predicate="door ∈ Doors ∧ getState(door) = locked"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="getState(door) ≔ unlocked" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="j" org.eventb.core.comment="event that simulate a door being closed" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="close">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="door"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="the door to lock" org.eventb.core.label="grd1" org.eventb.core.predicate="door ∈ Doors ∧ getState(door) = unlocked"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="getState(door) ≔ locked" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="l" org.eventb.core.comment="customer cards assigned to a reservation" org.eventb.core.identifier="reservations"/>
+<org.eventb.core.variable name="J" org.eventb.core.comment="the beginning of a reservation" org.eventb.core.identifier="beginning"/>
+<org.eventb.core.variable name="K" org.eventb.core.comment="the end of a reservation" org.eventb.core.identifier="ending"/>
+<org.eventb.core.variable name="P" org.eventb.core.comment="tell which cardId unlock which Rooms" org.eventb.core.identifier="unlock"/>
+<org.eventb.core.variable name="]" org.eventb.core.comment="function that check if a room is reserved" org.eventb.core.identifier="isReserved"/>
+<org.eventb.core.variable name="\" org.eventb.core.comment="function that get a state for a door" org.eventb.core.identifier="getState"/>
+<org.eventb.core.invariant name="n" org.eventb.core.comment="a door has a state (locked, unlocked etc.)" org.eventb.core.label="inv1" org.eventb.core.predicate="getState ∈ Doors → State"/>
+</org.eventb.core.machineFile>

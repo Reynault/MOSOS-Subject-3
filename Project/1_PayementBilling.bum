@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Machine that will manage payment and billing steps" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="." org.eventb.core.assignment="reservations ≔ ∅" org.eventb.core.comment="at the beginning, there are no reservations" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="beginning ≔ ∅" org.eventb.core.comment="so, no values for beginning, ending, getExtra" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="ending ≔ ∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="unlock ≔ customers × {∅}" org.eventb.core.comment="each customer cards is unlocking nothing" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="isReserved ≔ bedRooms × {0}" org.eventb.core.comment="bedRooms are free" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="SetParameters"/>
+<org.eventb.core.event name="d" org.eventb.core.comment="when a customer is paying a reservation" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="payement">
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="bed"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="begin"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="end"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="services"/>
+<org.eventb.core.parameter name="6" org.eventb.core.identifier="customer"/>
+<org.eventb.core.action name="C" org.eventb.core.assignment="reservations ≔ reservations ∪ {customer}" org.eventb.core.comment="setting up the reservation" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=":" org.eventb.core.assignment="beginning(customer) ≔ begin" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=";" org.eventb.core.assignment="ending(customer) ≔ end" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="D" org.eventb.core.assignment="isReserved(bed) ≔ 1" org.eventb.core.comment="the bedroom must be set as reserved" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="B" org.eventb.core.assignment="unlock(customer) ≔ services ∪ {bed}" org.eventb.core.comment="we make sure that the customer must be able to unlock requested services and a bedroom" org.eventb.core.label="act5"/>
+<org.eventb.core.guard name="F" org.eventb.core.label="grd1" org.eventb.core.predicate="bed ∈ bedRooms ∧ begin ∈ ℕ ∧ end ∈ ℕ ∧ services ⊆ serviceRooms ∧ customer ∈ customers"/>
+<org.eventb.core.guard name="7" org.eventb.core.comment="card id for customers that is not assigned yet" org.eventb.core.label="grd2" org.eventb.core.predicate="customer ∉ reservations"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="the bedrooms must be free" org.eventb.core.label="grd3" org.eventb.core.predicate="isReserved(bed) = 0"/>
+<org.eventb.core.guard name="/" org.eventb.core.comment="we must have a valid start and end" org.eventb.core.label="grd4" org.eventb.core.predicate="begin ≥ today"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="end &gt; today"/>
+<org.eventb.core.guard name="2" org.eventb.core.comment="beginning and ending dates must be coherent" org.eventb.core.label="grd6" org.eventb.core.predicate="begin &lt; end"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="f" org.eventb.core.comment="this sub set is containing all the customer cards that are assigned to a reservation" org.eventb.core.label="inv1" org.eventb.core.predicate="reservations ⊆ customers"/>
+<org.eventb.core.event name="p" org.eventb.core.comment="when a customer is leaving the hotel" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="billing">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="customer"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="bed"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="reservations ≔ reservations ∖ {customer}" org.eventb.core.comment="removing the reservation" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="6" org.eventb.core.assignment="beginning ≔ beginning ∖ {customer ↦ beginning(customer)}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="7" org.eventb.core.assignment="ending ≔ ending ∖ {customer ↦ ending(customer)}" org.eventb.core.label="act3"/>
+<org.eventb.core.action name=":" org.eventb.core.assignment="isReserved(bed) ≔ 0" org.eventb.core.comment="the bedroom is free" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="8" org.eventb.core.assignment="unlock(customer) ≔ ∅" org.eventb.core.comment="the cardid can no longer unlock a door" org.eventb.core.label="act5"/>
+<org.eventb.core.guard name="=" org.eventb.core.label="grd1" org.eventb.core.predicate="customer ∈ customers ∧ bed ∈ bedRooms"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="the customer must be registered" org.eventb.core.label="grd2" org.eventb.core.predicate="customer ∈ reservations"/>
+<org.eventb.core.guard name="." org.eventb.core.comment="the bedroom is the one reserved by the customer" org.eventb.core.label="grd3" org.eventb.core.predicate="bed ∈ unlock(customer)"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="M" org.eventb.core.comment="a date is represented by a number" org.eventb.core.label="inv2" org.eventb.core.predicate="beginning ∈ customers ⇸ ℕ"/>
+<org.eventb.core.invariant name="L" org.eventb.core.label="inv3" org.eventb.core.predicate="ending ∈ customers ⇸ ℕ"/>
+<org.eventb.core.invariant name="Q" org.eventb.core.comment="we are defining the unlock function that will gives us a list of rooms for a customer" org.eventb.core.label="inv4" org.eventb.core.predicate="unlock ∈ customers → ℙ(Rooms)"/>
+<org.eventb.core.invariant name="^" org.eventb.core.comment="0 if not reserved, 1 if reserved" org.eventb.core.label="inv5" org.eventb.core.predicate="isReserved ∈ bedRooms → {0,1}"/>
+<org.eventb.core.invariant name="N" org.eventb.core.comment="we want the starting date to be lower than the ending one" org.eventb.core.label="inv6" org.eventb.core.predicate="∀x·(x ∈ customers ∧ x ∈ dom(beginning) ∧ x ∈ dom(ending) ⇒ (beginning(x) &lt; ending(x)))"/>
+<org.eventb.core.invariant name="U" org.eventb.core.comment=" a card for customer can only open one bedroom" org.eventb.core.label="inv7" org.eventb.core.predicate="∀x·(∀y· (∀z· (x ∈ customers ∧ x ∈ dom(unlock) ⇒ ((y ∈ unlock(x) ∧ z ∈ unlock(x) ∧ y ∈ bedRooms ∧ z ∈ bedRooms) ⇒ y = z))))"/>
+<org.eventb.core.invariant name="k" org.eventb.core.comment="an unassigned card id for customer must not be used" org.eventb.core.label="inv8" org.eventb.core.predicate="∀x· x ∉ reservations ∧ x ∈ customers ⇒ unlock(x) = ∅ ∧ x ∉ dom(beginning) ∧ x ∉ dom(ending)"/>
+<org.eventb.core.invariant name="l" org.eventb.core.comment="an assigned card id must be linked with a reservation" org.eventb.core.label="inv9" org.eventb.core.predicate="∀x· x ∈ reservations ∧ x ∈ customers ⇒ unlock(x) ≠ ∅ ∧ x ∈ dom(beginning) ∧ x ∈ dom(ending)"/>
+<org.eventb.core.variable name="e" org.eventb.core.comment="customer cards assigned to a reservation" org.eventb.core.identifier="reservations"/>
+<org.eventb.core.variable name="J" org.eventb.core.comment="the beginning of a reservation" org.eventb.core.identifier="beginning"/>
+<org.eventb.core.variable name="K" org.eventb.core.comment="the end of a reservation" org.eventb.core.identifier="ending"/>
+<org.eventb.core.variable name="P" org.eventb.core.comment="tell which cardId unlock which Rooms" org.eventb.core.identifier="unlock"/>
+<org.eventb.core.variable name="]" org.eventb.core.comment="function that check if a room is reserved" org.eventb.core.identifier="isReserved"/>
+</org.eventb.core.machineFile>

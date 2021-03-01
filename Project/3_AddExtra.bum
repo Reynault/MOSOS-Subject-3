@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="adding the possibility to add extra services for reservations" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="2_CheckInOut"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="SetParameters"/>
+<org.eventb.core.variable name="e" org.eventb.core.comment="customer cards assigned to a reservation" org.eventb.core.identifier="reservations"/>
+<org.eventb.core.event name="f" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="getExtra ≔ ∅" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="g" org.eventb.core.comment="when a customer is paying a reservation" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="payement">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="payement"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="getExtra(customer) ≔ ∅" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="h" org.eventb.core.comment="when a customer is leaving the hotel" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="billing">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="billing"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="getExtra ≔ getExtra ∖ {customer ↦ getExtra(customer)}" org.eventb.core.label="act6"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="extra"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="getting extra services used by the customer" org.eventb.core.label="grd4" org.eventb.core.predicate="customer ∈ dom(getExtra) ∧ extra = getExtra(customer)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="i" org.eventb.core.comment="when a customer is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkIn">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkIn"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="j" org.eventb.core.comment="event that simulate when a customer is leaving a room (openning a door from the inside)" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkOut">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkOut"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="k" org.eventb.core.comment="event that simulate a door being closed" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="close"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="l" org.eventb.core.comment="when a customer is adding an extra service to his reservation" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addExtra">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="customer"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="service"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="price"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="price ∈ ℕ"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="customer ∈ customers ∧ customer ∈ reservations"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="service ∈ Services"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="getExtra(customer) ≔ getExtra(customer) ∪ ({service} × {price})" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="0" org.eventb.core.comment="the customer must have access to a service room" org.eventb.core.label="grd4" org.eventb.core.predicate="serviceRooms ∩ unlock(customer) ≠ ∅"/>
+<org.eventb.core.guard name="/" org.eventb.core.comment="the customer must have access to the room with the specified service" org.eventb.core.label="grd5" org.eventb.core.predicate="∃x· x ∈ (serviceRooms ∩ unlock(customer)) ∧ service ∈ servedServices(x)"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="J" org.eventb.core.comment="the beginning of a reservation" org.eventb.core.identifier="beginning"/>
+<org.eventb.core.variable name="K" org.eventb.core.comment="the end of a reservation" org.eventb.core.identifier="ending"/>
+<org.eventb.core.variable name="P" org.eventb.core.comment="tell which cardId unlock which Rooms" org.eventb.core.identifier="unlock"/>
+<org.eventb.core.variable name="]" org.eventb.core.comment="function that check if a room is reserved" org.eventb.core.identifier="isReserved"/>
+<org.eventb.core.variable name="\" org.eventb.core.comment="function that get a state for a door" org.eventb.core.identifier="getState"/>
+<org.eventb.core.variable name="8" org.eventb.core.comment="get extra services and the price for each" org.eventb.core.identifier="getExtra"/>
+<org.eventb.core.invariant name="o" org.eventb.core.comment="function that fetch a extra services for a reservation and the associated price" org.eventb.core.label="inv1" org.eventb.core.predicate="getExtra ∈ customers ⇸ ℙ(Services × ℕ)"/>
+<org.eventb.core.invariant name="m" org.eventb.core.comment="a customer cannot buy a service from a service room that he doesn't have" org.eventb.core.label="inv2" org.eventb.core.predicate="∀x· x ∈ customers ∧ x ∈ reservations&#13;&#10;&#9;⇒ (∀y· y ∈ Services ∧ y ∈ dom(getExtra(x))&#13;&#10;&#9;&#9;⇒ (∃z· z ∈ serviceRooms ∧ z ∈ unlock(x) ∧ y ∈ servedServices(z)))"/>
+<org.eventb.core.invariant name="p" org.eventb.core.comment="an unassigned card id for customer must not be used" org.eventb.core.label="inv3" org.eventb.core.predicate="∀x· x ∉ reservations ∧ x ∈ customers ⇒ x ∉ dom(getExtra)"/>
+<org.eventb.core.invariant name="q" org.eventb.core.comment="an assigned card id must be linked with a reservation" org.eventb.core.label="inv4" org.eventb.core.predicate="∀x· x ∈ reservations ∧ x ∈ customers ⇒ x ∈ dom(getExtra)"/>
+</org.eventb.core.machineFile>

@@ -3,8 +3,6 @@
 <org.eventb.core.carrierSet name="-" org.eventb.core.comment="modeling a card id" org.eventb.core.identifier="CardIds"/>
 <org.eventb.core.carrierSet name="'" org.eventb.core.comment="modeling rooms with a set" org.eventb.core.identifier="Rooms"/>
 <org.eventb.core.carrierSet name="+" org.eventb.core.comment="modeling services provided by the hotel" org.eventb.core.identifier="Services"/>
-<org.eventb.core.carrierSet name="," org.eventb.core.comment="modeling all the reservations" org.eventb.core.identifier="Reservations"/>
-<org.eventb.core.carrierSet name="4" org.eventb.core.comment="For those who paid further" org.eventb.core.identifier="Bills"/>
 <org.eventb.core.axiom name="5" org.eventb.core.comment="we are separating each set in subset like Cards' id (Officers, cleaners, Customers have differents id)" org.eventb.core.label="axm1" org.eventb.core.predicate="cleaners ⊆ CardIds"/>
 <org.eventb.core.axiom name="6" org.eventb.core.label="axm2" org.eventb.core.predicate="officers ⊆ CardIds"/>
 <org.eventb.core.axiom name="7" org.eventb.core.label="axm3" org.eventb.core.predicate="customers ⊆ CardIds"/>
@@ -28,11 +26,10 @@
 <org.eventb.core.axiom name="=" org.eventb.core.label="axm9" org.eventb.core.predicate="serviceRooms ⊆ Rooms"/>
 <org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm10" org.eventb.core.predicate="bedRooms ∩ serviceRooms = ∅"/>
 <org.eventb.core.axiom name="X" org.eventb.core.label="axm11" org.eventb.core.predicate="bedRooms ∪ serviceRooms = Rooms"/>
-<org.eventb.core.axiom name="b" org.eventb.core.comment="function that fetch services served in a service room" org.eventb.core.label="axm13" org.eventb.core.predicate="servedServices ∈ serviceRooms → ℙ(Services)"/>
-<org.eventb.core.axiom name="V" org.eventb.core.comment="a door is linked to a single room" org.eventb.core.label="axm14" org.eventb.core.predicate="getRoom ∈ Doors → Rooms"/>
-<org.eventb.core.axiom name="W" org.eventb.core.comment="every room has at least one door" org.eventb.core.label="axm15" org.eventb.core.predicate="∀x· (x ∈ Rooms ⇒ ∃y· (y ∈ Doors ∧ getRoom(y) = x))"/>
-<org.eventb.core.axiom name="R" org.eventb.core.comment="State is composed of locked, unlocked and always unlocked" org.eventb.core.label="axm16" org.eventb.core.predicate="partition(State, {locked, unlocked, alwaysUnlocked})"/>
+<org.eventb.core.axiom name="b" org.eventb.core.comment="function that fetch services served in a service room" org.eventb.core.label="axm12" org.eventb.core.predicate="servedServices ∈ serviceRooms → ℙ(Services)"/>
+<org.eventb.core.axiom name="V" org.eventb.core.comment="a door is linked to a single room" org.eventb.core.label="axm13" org.eventb.core.predicate="getRoom ∈ Doors → Rooms"/>
+<org.eventb.core.axiom name="W" org.eventb.core.comment="every room has at least one door" org.eventb.core.label="axm14" org.eventb.core.predicate="∀x· (x ∈ Rooms ⇒ ∃y· (y ∈ Doors ∧ getRoom(y) = x))"/>
+<org.eventb.core.axiom name="R" org.eventb.core.comment="State is composed of locked, unlocked and always unlocked" org.eventb.core.label="axm15" org.eventb.core.predicate="partition(State, {locked, unlocked, alwaysUnlocked})"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="K" org.eventb.core.comment="the date of today" org.eventb.core.identifier="today"/>
-<org.eventb.core.axiom name="c" org.eventb.core.label="axm17" org.eventb.core.predicate="locked ≠ unlocked ∧ unlocked ≠ alwaysUnlocked ∧ alwaysUnlocked ≠ locked"/>
-<org.eventb.core.axiom name="L" org.eventb.core.comment="The date is represented by a natural" org.eventb.core.label="axm18" org.eventb.core.predicate="today ∈ ℕ"/>
+<org.eventb.core.axiom name="L" org.eventb.core.comment="The date is represented by a natural" org.eventb.core.label="axm16" org.eventb.core.predicate="today ∈ ℕ"/>
 </org.eventb.core.contextFile>
