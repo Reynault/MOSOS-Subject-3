@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="State" org.eventb.core.type="ℙ(State)"/>
 <org.eventb.core.poIdentifier name="Doors" org.eventb.core.type="ℙ(Doors)"/>
@@ -49,13 +49,13 @@
 <org.eventb.core.poIdentifier name="door4" org.eventb.core.type="Doors"/>
 <org.eventb.core.poIdentifier name="door1" org.eventb.core.type="Doors"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="axm9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="axm9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="restaurant∈dom(servedServices)∧servedServices∈Rooms ⇸ ℙ(Services)" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#S"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#S"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex\|"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="swimmingPool∈dom(servedServices)∧servedServices∈Rooms ⇸ ℙ(Services)" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#T"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#T"/>

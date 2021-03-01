@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="State" org.eventb.core.type="ℙ(State)"/>
 <org.eventb.core.poIdentifier name="Doors" org.eventb.core.type="ℙ(Doors)"/>
@@ -128,13 +128,13 @@
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="customer∈reservations" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="bed∈unlock(customer)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.guard#."/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="checkIn/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="checkIn/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes)("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="door∈dom(getRoom)∧getRoom∈Doors ⇸ Rooms" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#i|org.eventb.core.guard#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#i|org.eventb.core.guard#2"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes)("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="checkIn/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="checkIn/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes))"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="customer∈dom(unlock)∧unlock∈CardIds ⇸ ℙ(Rooms)" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#i|org.eventb.core.guard#,"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#i|org.eventb.core.guard#,"/>
@@ -224,6 +224,100 @@
 <org.eventb.core.poPredicateSet name="EVTALLHYPSetParametes+" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTIDENTSetParametes+" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="door∈Doors∧getState(door)=unlocked" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#j|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="checkInOfficer/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes,'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="door∈Doors∧room∈Rooms⇒door∈dom(getRoom)∧getRoom∈Doors ⇸ Rooms" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes,'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="checkInOfficer/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes,("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="door∈dom(getState)∧getState∈Doors ⇸ State" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes,("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="checkInOfficer/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTALLHYPSetParametes,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="getState{door ↦ unlocked}∈Doors → State" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poSequent#checkInOfficer\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSetParametes," org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="room" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
+<org.eventb.core.poIdentifier name="officer" org.eventb.core.type="CardIds"/>
+<org.eventb.core.poIdentifier name="door" org.eventb.core.type="Doors"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPSetParametes,'" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTIDENTSetParametes," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="officer∈officers" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPSetParametes,(" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes,'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door∈Doors∧room∈Rooms∧room=getRoom(door)" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSetParametes," org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes,(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="getState(door)=locked" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="checkInCleaner/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes-'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="door∈Doors∧room∈Rooms⇒door∈dom(getRoom)∧getRoom∈Doors ⇸ Rooms" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes-'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="checkInCleaner/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes-("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="door∈dom(getState)∧getState∈Doors ⇸ State" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes-("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="checkInCleaner/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTALLHYPSetParametes-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="getState{door ↦ unlocked}∈Doors → State" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poSequent#checkInCleaner\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSetParametes-" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="room" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
+<org.eventb.core.poIdentifier name="door" org.eventb.core.type="Doors"/>
+<org.eventb.core.poIdentifier name="cleaner" org.eventb.core.type="CardIds"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPSetParametes-'" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTIDENTSetParametes-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cleaner∈cleaners" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPSetParametes-(" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes-'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door∈Doors∧room∈Rooms∧room=getRoom(door)" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSetParametes-" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTHYPSetParametes-(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="getState(door)=locked" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="setAlarmOff/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTALLHYPSetParametes."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Doors × {unlocked}∈Doors → State" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#q"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poSequent#setAlarmOff\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSetParametes." org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSetParametes." org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTIDENTSetParametes." org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="setAlarmOn/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTALLHYPSetParametes\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Doors × {alwaysUnlocked}∈Doors → State" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#r"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.invariant#n"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poSequent#setAlarmOn\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSetParametes/" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSetParametes/" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#EVTIDENTSetParametes\/" org.eventb.core.poStamp="0"/>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/2_CheckInOut.bpo|org.eventb.core.poFile#2_CheckInOut|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="getState∈Doors → State" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.invariant#n"/>
 </org.eventb.core.poPredicateSet>

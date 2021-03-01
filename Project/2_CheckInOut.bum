@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.comment="adding check in and check out for customers" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment="adding check in and check out for customers, cleaners and officers" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="1_PayementBilling"/>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="SetParameters"/>
 <org.eventb.core.event name="f" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
@@ -40,4 +40,28 @@
 <org.eventb.core.variable name="]" org.eventb.core.comment="function that check if a room is reserved" org.eventb.core.identifier="isReserved"/>
 <org.eventb.core.variable name="\" org.eventb.core.comment="function that get a state for a door" org.eventb.core.identifier="getState"/>
 <org.eventb.core.invariant name="n" org.eventb.core.comment="a door has a state (locked, unlocked etc.)" org.eventb.core.label="inv1" org.eventb.core.predicate="getState ∈ Doors → State"/>
+<org.eventb.core.event name="o" org.eventb.core.comment="when an officer is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkInOfficer">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="officer"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="door"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="room"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="the officer is assigned" org.eventb.core.label="grd1" org.eventb.core.predicate="officer ∈ officers"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="we fetch the door" org.eventb.core.label="grd2" org.eventb.core.predicate="door ∈ Doors ∧ room ∈ Rooms ∧ room = getRoom(door)"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="getState(door) = locked"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="getState(door) ≔ unlocked" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="p" org.eventb.core.comment="when a cleaner is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="checkInCleaner">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="cleaner"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="door"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="room"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="cleaner ∈ cleaners"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="door ∈ Doors ∧ room ∈ Rooms ∧ room = getRoom(door)"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="getState(door) = locked"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="getState(door) ≔ unlocked" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="q" org.eventb.core.comment="when we set an emergency alarm off (like a fire alarm)" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setAlarmOff">
+<org.eventb.core.action name="'" org.eventb.core.assignment="getState ≔ Doors × {unlocked}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="r" org.eventb.core.comment="when we set an emergency alarm on" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setAlarmOn">
+<org.eventb.core.action name="'" org.eventb.core.assignment="getState ≔ Doors × {alwaysUnlocked}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>
