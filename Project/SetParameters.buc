@@ -3,12 +3,9 @@
 <org.eventb.core.extendsContext name="(" org.eventb.core.target="Context"/>
 <org.eventb.core.axiom name="." org.eventb.core.label="axm1" org.eventb.core.predicate="today = 2021"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="2" org.eventb.core.identifier="restaurant"/>
-<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="3" org.eventb.core.identifier="swimmingPool"/>
-<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="/" org.eventb.core.identifier="buyADrink"/>
-<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="0" org.eventb.core.identifier="massage"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="1" org.eventb.core.identifier="buyFood"/>
-<org.eventb.core.axiom name="4" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(serviceRooms, {restaurant, swimmingPool})"/>
-<org.eventb.core.axiom name="5" org.eventb.core.label="axm3" org.eventb.core.predicate="partition(Services, {buyADrink, massage, buyFood})"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(serviceRooms, {restaurant})"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="axm3" org.eventb.core.predicate="partition(Services, {buyFood})"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=":" org.eventb.core.identifier="room1"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=";" org.eventb.core.identifier="room2"/>
 <org.eventb.core.axiom name="=" org.eventb.core.label="axm4" org.eventb.core.predicate="partition(bedRooms, {room1, room2})"/>
@@ -19,7 +16,6 @@
 <org.eventb.core.axiom name="F" org.eventb.core.label="axm7" org.eventb.core.predicate="partition(cleaners, {michel})"/>
 <org.eventb.core.axiom name="R" org.eventb.core.label="axm8" org.eventb.core.predicate="partition(Doors, {door1, door2, door3, door4})"/>
 <org.eventb.core.axiom name="S" org.eventb.core.label="axm9" org.eventb.core.predicate="servedServices(restaurant) = {buyFood}"/>
-<org.eventb.core.axiom name="T" org.eventb.core.label="axm10" org.eventb.core.predicate="servedServices(swimmingPool) = {buyADrink, massage}"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="B" org.eventb.core.identifier="rosalind"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="C" org.eventb.core.identifier="michel"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="K" org.eventb.core.identifier="door1"/>

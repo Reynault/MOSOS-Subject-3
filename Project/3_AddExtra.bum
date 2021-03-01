@@ -14,7 +14,8 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="billing"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="getExtra ≔ getExtra ∖ {customer ↦ extra}" org.eventb.core.label="act6"/>
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="extra"/>
-<org.eventb.core.guard name="*" org.eventb.core.comment="getting extra services used by the customer" org.eventb.core.label="grd4" org.eventb.core.predicate="extra ∈ ℙ(Services) ∧ customer ∈ dom(getExtra) ∧ extra = getExtra(customer)"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="getting extra services used by the customer" org.eventb.core.label="grd5" org.eventb.core.predicate="extra ∈ ℙ(Services) ∧ customer ∈ dom(getExtra) ∧ extra = getExtra(customer)"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="customer ∈ reservations"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="i" org.eventb.core.comment="when a customer is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkIn">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkIn"/>

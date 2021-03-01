@@ -34,7 +34,7 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkInOfficer"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="x" org.eventb.core.comment="when a cleaner is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkInCleaner">
-<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="toClean(room) = 1 ∧ isBeingCleaned(room) = 0"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="toClean(room) = 1 ∨ isBeingCleaned(room) = 1"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="toClean(room) ≔ 0" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="isBeingCleaned(room) ≔ 1" org.eventb.core.label="act3"/>
 <org.eventb.core.refinesEvent name="1" org.eventb.core.target="checkInCleaner"/>

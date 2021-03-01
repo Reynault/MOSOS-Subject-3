@@ -50,8 +50,8 @@
 </org.eventb.core.event>
 <org.eventb.core.variable name="'4" org.eventb.core.comment="when an emergency alarm is on" org.eventb.core.identifier="isAlarmOn"/>
 <org.eventb.core.invariant name="'5" org.eventb.core.label="inv1" org.eventb.core.predicate="isAlarmOn ∈ {0,1}"/>
-<org.eventb.core.invariant name="'6" org.eventb.core.label="inv2" org.eventb.core.predicate="isAlarmOn = 1 ⇒ (∀x· x ∈ Doors ∧ getState(x) = alwaysUnlocked)"/>
-<org.eventb.core.invariant name="'7" org.eventb.core.label="inv3" org.eventb.core.predicate="isAlarmOn = 0 ⇒ (∀x· x ∈ Doors ∧ getState(x) ≠ alwaysUnlocked)"/>
+<org.eventb.core.invariant name="'6" org.eventb.core.label="inv2" org.eventb.core.predicate="isAlarmOn = 1 ⇒ (∀x· x ∈ Doors ∧ getState(x) ∈ {alwaysUnlocked} ∧ getState(x) ∉ {locked, unlocked})"/>
+<org.eventb.core.invariant name="'7" org.eventb.core.label="inv3" org.eventb.core.predicate="isAlarmOn = 0 ⇒ (∀x· x ∈ Doors ∧ getState(x) ∈ {locked, unlocked})"/>
 <org.eventb.core.event name="')" org.eventb.core.comment="when a customer is adding an extra service to his reservation" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addExtra">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addExtra"/>
 </org.eventb.core.event>
