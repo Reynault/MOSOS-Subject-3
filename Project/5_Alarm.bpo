@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="9">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="14">
 <org.eventb.core.poIdentifier name="State" org.eventb.core.type="ℙ(State)"/>
 <org.eventb.core.poIdentifier name="Doors" org.eventb.core.type="ℙ(Doors)"/>
 <org.eventb.core.poIdentifier name="Services" org.eventb.core.type="ℙ(Services)"/>
@@ -34,36 +34,29 @@
 <org.eventb.core.poPredicate name="servedServicf*" org.eventb.core.predicate="partition(State,{locked,unlocked,alwaysUnlocked})" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#R"/>
 <org.eventb.core.poPredicate name="servedServicf+" org.eventb.core.predicate="today∈ℕ" org.eventb.core.source="/Project/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#L"/>
 <org.eventb.core.poIdentifier name="rosalind" org.eventb.core.type="CardIds"/>
-<org.eventb.core.poIdentifier name="buySPA" org.eventb.core.type="Services"/>
 <org.eventb.core.poIdentifier name="buyFood" org.eventb.core.type="Services"/>
 <org.eventb.core.poIdentifier name="michel" org.eventb.core.type="CardIds"/>
-<org.eventb.core.poIdentifier name="room3" org.eventb.core.type="Rooms"/>
 <org.eventb.core.poIdentifier name="room1" org.eventb.core.type="Rooms"/>
-<org.eventb.core.poIdentifier name="room2" org.eventb.core.type="Rooms"/>
 <org.eventb.core.poIdentifier name="restaurant" org.eventb.core.type="Rooms"/>
-<org.eventb.core.poIdentifier name="donovan" org.eventb.core.type="CardIds"/>
 <org.eventb.core.poIdentifier name="roger" org.eventb.core.type="CardIds"/>
-<org.eventb.core.poIdentifier name="bob" org.eventb.core.type="CardIds"/>
-<org.eventb.core.poIdentifier name="buyDrink" org.eventb.core.type="Services"/>
 <org.eventb.core.poIdentifier name="lucien" org.eventb.core.type="CardIds"/>
 <org.eventb.core.poIdentifier name="massage" org.eventb.core.type="Services"/>
 <org.eventb.core.poIdentifier name="massageRoom" org.eventb.core.type="Rooms"/>
 <org.eventb.core.poIdentifier name="door3" org.eventb.core.type="Doors"/>
 <org.eventb.core.poIdentifier name="door2" org.eventb.core.type="Doors"/>
-<org.eventb.core.poIdentifier name="door4" org.eventb.core.type="Doors"/>
 <org.eventb.core.poIdentifier name="door1" org.eventb.core.type="Doors"/>
 <org.eventb.core.poPredicate name="servedServicf," org.eventb.core.predicate="today=2021" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#."/>
 <org.eventb.core.poPredicate name="servedServicf-" org.eventb.core.predicate="partition(serviceRooms,{restaurant,massageRoom})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#4"/>
-<org.eventb.core.poPredicate name="servedServicf." org.eventb.core.predicate="partition(Services,{buyFood,massage,buySPA,buyDrink})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#5"/>
-<org.eventb.core.poPredicate name="servedServicf/" org.eventb.core.predicate="partition(bedRooms,{room1,room2,room3})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#="/>
-<org.eventb.core.poPredicate name="servedServicf0" org.eventb.core.predicate="partition(customers,{lucien,donovan,roger,bob})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#D"/>
+<org.eventb.core.poPredicate name="servedServicf." org.eventb.core.predicate="partition(Services,{buyFood,massage})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="servedServicf/" org.eventb.core.predicate="partition(bedRooms,{room1})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="servedServicf0" org.eventb.core.predicate="partition(customers,{lucien,roger})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#D"/>
 <org.eventb.core.poPredicate name="servedServicf1" org.eventb.core.predicate="partition(officers,{rosalind})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#E"/>
 <org.eventb.core.poPredicate name="servedServicf2" org.eventb.core.predicate="partition(cleaners,{michel})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#F"/>
-<org.eventb.core.poPredicate name="servedServicf3" org.eventb.core.predicate="partition(Doors,{door1,door2,door3,door4})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#R"/>
+<org.eventb.core.poPredicate name="servedServicf3" org.eventb.core.predicate="partition(Doors,{door1,door2,door3})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#R"/>
 <org.eventb.core.poPredicate name="servedServicf4" org.eventb.core.predicate="servedServices(restaurant)={buyFood}" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#S"/>
 <org.eventb.core.poPredicate name="servedServicf5" org.eventb.core.predicate="servedServices(massageRoom)={massage}" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#V"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="14">
 <org.eventb.core.poIdentifier name="isReserved" org.eventb.core.type="ℙ(Rooms×ℤ)"/>
 <org.eventb.core.poIdentifier name="reservations" org.eventb.core.type="ℙ(CardIds)"/>
 <org.eventb.core.poIdentifier name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
@@ -89,19 +82,19 @@
 <org.eventb.core.poPredicate name="isBeingCleaneq" org.eventb.core.predicate="∀x⦂Rooms·x∈Rooms∧isBeingCleaned(x)=1⇒toClean(x)=0" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.invariant#''"/>
 <org.eventb.core.poPredicate name="isBeingCleaner" org.eventb.core.predicate="∀x⦂Rooms·x∈Rooms∧toClean(x)=1⇒isBeingCleaned(x)=0" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.invariant#'*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="inv2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="inv2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes*"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=1⇒(∀x⦂Doors·x∈Doors⇒x∈dom(getState)∧getState∈Doors ⇸ State)" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes*"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=0⇒(∀x⦂Doors·x∈Doors⇒x∈dom(getState)∧getState∈Doors ⇸ State)" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanee"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'5"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#p"/>
@@ -110,7 +103,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes*|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanee"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=1⇒(∀x⦂Doors·x∈Doors∧(Doors × {locked})(x)∈{alwaysUnlocked}∧(Doors × {locked})(x)∉{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#p"/>
@@ -119,7 +112,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="14">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanee"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0⇒(∀x⦂Doors·x∈Doors∧(Doors × {locked})(x)∈{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#p"/>
@@ -128,7 +121,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanee" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanee" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="14">
 <org.eventb.core.poIdentifier name="unlock'" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
 <org.eventb.core.poIdentifier name="toClean'" org.eventb.core.type="ℙ(Rooms×ℤ)"/>
 <org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
@@ -140,8 +133,8 @@
 <org.eventb.core.poIdentifier name="isAlarmOn'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="getExtra'" org.eventb.core.type="ℙ(CardIds×ℙ(Services))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanee" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanee" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanef" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanee" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanee" org.eventb.core.poStamp="14"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanef" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="unlock'" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
 <org.eventb.core.poIdentifier name="customer" org.eventb.core.type="CardIds"/>
 <org.eventb.core.poIdentifier name="bed" org.eventb.core.type="Rooms"/>
@@ -154,7 +147,7 @@
 <org.eventb.core.poIdentifier name="services" org.eventb.core.type="ℙ(Rooms)"/>
 <org.eventb.core.poIdentifier name="getExtra'" org.eventb.core.type="ℙ(CardIds×ℙ(Services))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanef" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanef" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanef" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanef" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bed∈bedRooms∧begin∈ℕ∧end∈ℕ∧services⊆serviceRooms" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d|org.eventb.core.guard#F"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="customer∈customers∧customer∉reservations" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d|org.eventb.core.guard#7"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="isReserved(bed)=0" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d|org.eventb.core.guard#-"/>
@@ -162,7 +155,7 @@
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="end&gt;today" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d|org.eventb.core.guard#0"/>
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="begin&lt;end" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d|org.eventb.core.guard#2"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaneg" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaneg" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="unlock'" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
 <org.eventb.core.poIdentifier name="customer" org.eventb.core.type="CardIds"/>
 <org.eventb.core.poIdentifier name="bed" org.eventb.core.type="Rooms"/>
@@ -173,14 +166,14 @@
 <org.eventb.core.poIdentifier name="reservations'" org.eventb.core.type="ℙ(CardIds)"/>
 <org.eventb.core.poIdentifier name="getExtra'" org.eventb.core.type="ℙ(CardIds×ℙ(Services))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaneg" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaneg" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaneg" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaneg" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="customer∈reservations" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bed∈bedRooms∧bed∈unlock(customer)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.guard#."/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="isReserved(bed)=1" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.guard#&gt;"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="customer∈reservations" org.eventb.core.source="/Project/3_AddExtra.bum|org.eventb.core.machineFile#3_AddExtra|org.eventb.core.event#h|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="extra∈ℙ(Services)∧extra=getExtra(customer)" org.eventb.core.source="/Project/3_AddExtra.bum|org.eventb.core.machineFile#3_AddExtra|org.eventb.core.event#h|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="checkIn/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="checkIn/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleaneh"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=1⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ unlocked})(x)∈{alwaysUnlocked}∧(getState{door ↦ unlocked})(x)∉{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#t"/>
@@ -189,7 +182,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#checkIn\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="checkIn/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="checkIn/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleaneh"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=0⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ unlocked})(x)∈{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#t"/>
@@ -198,13 +191,13 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#checkIn\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaneh" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaneh" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="room" org.eventb.core.type="Rooms"/>
 <org.eventb.core.poIdentifier name="customer" org.eventb.core.type="CardIds"/>
 <org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
 <org.eventb.core.poIdentifier name="door" org.eventb.core.type="Doors"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaneh" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaneh" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaneh" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaneh" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="door∈Doors∧room∈Rooms" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#i|org.eventb.core.guard#3"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="customer∈reservations" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#i|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="room=getRoom(door)" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#i|org.eventb.core.guard#2"/>
@@ -214,7 +207,7 @@
 <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="isBeingCleaned(room)=0" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#t|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="isAlarmOn=0" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.event#'*|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="checkOut/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="checkOut/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanei"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=1⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ unlocked})(x)∈{alwaysUnlocked}∧(getState{door ↦ unlocked})(x)∉{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#u"/>
@@ -223,7 +216,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#checkOut\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="checkOut/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="checkOut/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanei"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=0⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ unlocked})(x)∈{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#u"/>
@@ -232,14 +225,14 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#checkOut\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanei" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanei" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
 <org.eventb.core.poIdentifier name="door" org.eventb.core.type="Doors"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanei" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanei" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanei" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanei" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="door∈Doors∧getState(door)=locked" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#k|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="close/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="close/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanej"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=1⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ locked})(x)∈{alwaysUnlocked}∧(getState{door ↦ locked})(x)∉{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#v"/>
@@ -248,7 +241,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#close\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="close/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="close/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanej"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=0⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ locked})(x)∈{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#v"/>
@@ -257,14 +250,14 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#close\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanej" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanej" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
 <org.eventb.core.poIdentifier name="door" org.eventb.core.type="Doors"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanej" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanej" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanej" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanej" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="door∈Doors∧getState(door)=unlocked" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#j|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="checkInOfficer/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="checkInOfficer/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanek"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=1⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ unlocked})(x)∈{alwaysUnlocked}∧(getState{door ↦ unlocked})(x)∉{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#w"/>
@@ -273,7 +266,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#checkInOfficer\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="checkInOfficer/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="checkInOfficer/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanek"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=0⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ unlocked})(x)∈{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#w"/>
@@ -282,19 +275,19 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#checkInOfficer\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanek" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanek" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="room" org.eventb.core.type="Rooms"/>
 <org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
 <org.eventb.core.poIdentifier name="officer" org.eventb.core.type="CardIds"/>
 <org.eventb.core.poIdentifier name="door" org.eventb.core.type="Doors"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanek" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanek" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanek" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanek" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="officer∈officers" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door∈Doors∧room∈Rooms∧room=getRoom(door)" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="getState(door)=locked" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#o|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="isAlarmOn=0" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.event#'-|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="checkInCleaner/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="checkInCleaner/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanel"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=1⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ unlocked})(x)∈{alwaysUnlocked}∧(getState{door ↦ unlocked})(x)∉{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#x"/>
@@ -303,7 +296,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#checkInCleaner\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="checkInCleaner/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="checkInCleaner/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanel"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isAlarmOn=0⇒(∀x⦂Doors·x∈Doors∧(getState{door ↦ unlocked})(x)∈{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#x"/>
@@ -312,7 +305,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#checkInCleaner\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanel" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanel" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="room" org.eventb.core.type="Rooms"/>
 <org.eventb.core.poIdentifier name="toClean'" org.eventb.core.type="ℙ(Rooms×ℤ)"/>
 <org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
@@ -320,14 +313,14 @@
 <org.eventb.core.poIdentifier name="isBeingCleaned'" org.eventb.core.type="ℙ(Rooms×ℤ)"/>
 <org.eventb.core.poIdentifier name="cleaner" org.eventb.core.type="CardIds"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanel" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanel" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanel" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanel" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cleaner∈cleaners" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door∈Doors∧room∈Rooms∧room=getRoom(door)" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="getState(door)=locked" org.eventb.core.source="/Project/2_CheckInOut.bum|org.eventb.core.machineFile#2_CheckInOut|org.eventb.core.event#p|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="toClean(room)=1∨isBeingCleaned(room)=1" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#x|org.eventb.core.guard#-"/>
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="isAlarmOn=0" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.event#'.|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="setAlarmOff/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="setAlarmOff/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanem"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'5"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#'+"/>
@@ -336,7 +329,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#setAlarmOff\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes*|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="setAlarmOff/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="setAlarmOff/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanem"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=1⇒(∀x⦂Doors·x∈Doors∧(Doors × {unlocked})(x)∈{alwaysUnlocked}∧(Doors × {unlocked})(x)∉{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#'+"/>
@@ -345,7 +338,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#setAlarmOff\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="setAlarmOff/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="setAlarmOff/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanem"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0⇒(∀x⦂Doors·x∈Doors∧(Doors × {unlocked})(x)∈{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#'+"/>
@@ -354,14 +347,14 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#setAlarmOff\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanem" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanem" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
 <org.eventb.core.poIdentifier name="isAlarmOn'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanem" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanem" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanem" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanem" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="isAlarmOn=1" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.event#'2|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="setAlarmOn/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="setAlarmOn/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanen"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'5"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#',"/>
@@ -370,7 +363,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#setAlarmOn\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes*|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="setAlarmOn/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="setAlarmOn/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanen"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=1⇒(∀x⦂Doors·x∈Doors∧(Doors × {alwaysUnlocked})(x)∈{alwaysUnlocked}∧(Doors × {alwaysUnlocked})(x)∉{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#',"/>
@@ -379,7 +372,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#setAlarmOn\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="setAlarmOn/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="setAlarmOn/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTALLHYPisBeingCleanen"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=0⇒(∀x⦂Doors·x∈Doors∧(Doors × {alwaysUnlocked})(x)∈{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#',"/>
@@ -388,59 +381,59 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poSequent#setAlarmOn\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanen" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanen" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="getState'" org.eventb.core.type="ℙ(Doors×State)"/>
 <org.eventb.core.poIdentifier name="isAlarmOn'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanen" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanen" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanen" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanen" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="isAlarmOn=0" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.event#'3|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaneo" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaneo" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="service" org.eventb.core.type="Services"/>
 <org.eventb.core.poIdentifier name="customer" org.eventb.core.type="CardIds"/>
 <org.eventb.core.poIdentifier name="getExtra'" org.eventb.core.type="ℙ(CardIds×ℙ(Services))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaneo" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaneo" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaneo" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaneo" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="customer∈reservations" org.eventb.core.source="/Project/3_AddExtra.bum|org.eventb.core.machineFile#3_AddExtra|org.eventb.core.event#l|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="service∈Services" org.eventb.core.source="/Project/3_AddExtra.bum|org.eventb.core.machineFile#3_AddExtra|org.eventb.core.event#l|org.eventb.core.guard#-"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="serviceRooms∩unlock(customer)≠(∅ ⦂ ℙ(Rooms))" org.eventb.core.source="/Project/3_AddExtra.bum|org.eventb.core.machineFile#3_AddExtra|org.eventb.core.event#l|org.eventb.core.guard#0"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∃x⦂Rooms·x∈serviceRooms∩unlock(customer)∧service∈servedServices(x)" org.eventb.core.source="/Project/3_AddExtra.bum|org.eventb.core.machineFile#3_AddExtra|org.eventb.core.event#l|org.eventb.core.guard#\/"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanep" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleanep" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="room" org.eventb.core.type="Rooms"/>
 <org.eventb.core.poIdentifier name="isBeingCleaned'" org.eventb.core.type="ℙ(Rooms×ℤ)"/>
 <org.eventb.core.poIdentifier name="cleaner" org.eventb.core.type="CardIds"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanep" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanep" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleanep" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleanep" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cleaner∈cleaners" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#~|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="room∈Rooms∧isBeingCleaned(room)=1" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#~|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaneq" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaneq" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="room" org.eventb.core.type="Rooms"/>
 <org.eventb.core.poIdentifier name="toClean'" org.eventb.core.type="ℙ(Rooms×ℤ)"/>
 <org.eventb.core.poIdentifier name="officer" org.eventb.core.type="CardIds"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaneq" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaneq" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaneq" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaneq" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="room∈Rooms∧toClean(room)=0∧isBeingCleaned(room)=0" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#'(|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="officer∈officers" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#'(|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaner" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTisBeingCleaner" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="room" org.eventb.core.type="Rooms"/>
 <org.eventb.core.poIdentifier name="customer" org.eventb.core.type="CardIds"/>
 <org.eventb.core.poIdentifier name="toClean'" org.eventb.core.type="ℙ(Rooms×ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaner" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaner" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPisBeingCleaner" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#EVTIDENTisBeingCleaner" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="customer∈reservations" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#')|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="room∈bedRooms∧room∈unlock(customer)" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#')|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="toClean(room)=0∧isBeingCleaned(room)=0" org.eventb.core.source="/Project/4_Cleaner.bum|org.eventb.core.machineFile#4_Cleaner|org.eventb.core.event#')|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPSetParametes*" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="HYPSetParametes*" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="isAlarmOn∈{0,1}" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'5"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPSetParametes+" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes*" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="HYPSetParametes+" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes*" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="isAlarmOn=1⇒(∀x⦂Doors·x∈Doors∧getState(x)∈{alwaysUnlocked}∧getState(x)∉{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'6"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/5_Alarm.bpo|org.eventb.core.poFile#5_Alarm|org.eventb.core.poPredicateSet#HYPSetParametes+" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="isAlarmOn=0⇒(∀x⦂Doors·x∈Doors∧getState(x)∈{locked,unlocked})" org.eventb.core.source="/Project/5_Alarm.bum|org.eventb.core.machineFile#5_Alarm|org.eventb.core.invariant#'7"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
