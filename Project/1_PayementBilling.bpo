@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="17">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="State" org.eventb.core.type="ℙ(State)"/>
 <org.eventb.core.poIdentifier name="Doors" org.eventb.core.type="ℙ(Doors)"/>
 <org.eventb.core.poIdentifier name="Services" org.eventb.core.type="ℙ(Services)"/>
@@ -56,26 +56,26 @@
 <org.eventb.core.poPredicate name="servedServicf4" org.eventb.core.predicate="servedServices(restaurant)={buyFood}" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#S"/>
 <org.eventb.core.poPredicate name="servedServicf5" org.eventb.core.predicate="servedServices(massageRoom)={massage}" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#V"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="isReserved" org.eventb.core.type="ℙ(Rooms×ℤ)"/>
 <org.eventb.core.poIdentifier name="reservations" org.eventb.core.type="ℙ(CardIds)"/>
 <org.eventb.core.poIdentifier name="unlock" org.eventb.core.type="ℙ(CardIds×ℙ(Rooms))"/>
 <org.eventb.core.poIdentifier name="beginning" org.eventb.core.type="ℙ(CardIds×ℤ)"/>
 <org.eventb.core.poIdentifier name="ending" org.eventb.core.type="ℙ(CardIds×ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="inv6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="inv6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈reservations⇒x∈dom(beginning)∧beginning∈CardIds ⇸ ℤ∧x∈dom(ending)∧ending∈CardIds ⇸ ℤ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#N"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#N"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="inv7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParametery"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈reservations⇒x∈dom(unlock)∧unlock∈CardIds ⇸ ℙ(Rooms)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#U"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#U"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParametery"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter{"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CardIds))⊆customers" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#f"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#'"/>
@@ -83,7 +83,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter{"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CardIds×ℤ))∈(∅ ⦂ ℙ(CardIds)) → ℕ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#M"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#'"/>
@@ -91,7 +91,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter{"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CardIds×ℤ))∈(∅ ⦂ ℙ(CardIds)) → ℕ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#L"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#'"/>
@@ -99,7 +99,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter{"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CardIds×ℙ(Rooms)))∈(∅ ⦂ ℙ(CardIds)) → ℙ(Rooms)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#Q"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#'"/>
@@ -107,7 +107,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter{"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bedRooms × {0}∈bedRooms → {0,1}" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#^"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#'"/>
@@ -115,7 +115,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter{"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈(∅ ⦂ ℙ(CardIds))⇒(∅ ⦂ ℙ(CardIds×ℤ))(x)&lt;(∅ ⦂ ℙ(CardIds×ℤ))(x)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#N"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#'"/>
@@ -123,7 +123,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParametery|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter{"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈(∅ ⦂ ℙ(CardIds))⇒(∀y⦂Rooms·∀z⦂Rooms·y∈(∅ ⦂ ℙ(CardIds×ℙ(Rooms)))(x)∧z∈(∅ ⦂ ℙ(CardIds×ℙ(Rooms)))(x)∧y∈bedRooms∧z∈bedRooms⇒y=z)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#U"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#'"/>
@@ -139,13 +139,13 @@
 <org.eventb.core.poIdentifier name="reservations'" org.eventb.core.type="ℙ(CardIds)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPSetParameter{" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTIDENTSetParameter{" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poSequent name="payement/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="payement/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTHYPSetParameter\|("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bed∈dom(isReserved)∧isReserved∈Rooms ⇸ ℤ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d|org.eventb.core.guard#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d|org.eventb.core.guard#-"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTHYPSetParameter\|("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="payement/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="payement/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reservations∪{customer}⊆customers" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#f"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d"/>
@@ -153,7 +153,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#payement\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="payement/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="payement/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="beginning{customer ↦ begin}∈reservations∪{customer} → ℕ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#M"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d"/>
@@ -161,7 +161,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#payement\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="payement/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="payement/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ending{customer ↦ end}∈reservations∪{customer} → ℕ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#L"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d"/>
@@ -169,7 +169,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#payement\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="payement/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="payement/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="unlock{customer ↦ services∪{bed}}∈reservations∪{customer} → ℙ(Rooms)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#Q"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d"/>
@@ -177,7 +177,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#payement\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="payement/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="payement/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isReserved{bed ↦ 1}∈bedRooms → {0,1}" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#^"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d"/>
@@ -185,7 +185,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#payement\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="payement/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="payement/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈reservations∪{customer}⇒(beginning{customer ↦ begin})(x)&lt;(ending{customer ↦ end})(x)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#N"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d"/>
@@ -193,7 +193,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#payement\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParametery|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="payement/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="payement/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈reservations∪{customer}⇒(∀y⦂Rooms·∀z⦂Rooms·y∈(unlock{customer ↦ services∪{bed}})(x)∧z∈(unlock{customer ↦ services∪{bed}})(x)∧y∈bedRooms∧z∈bedRooms⇒y=z)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#U"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d"/>
@@ -223,19 +223,19 @@
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="end&gt;today" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d|org.eventb.core.guard#0"/>
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="begin&lt;end" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#d|org.eventb.core.guard#2"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="billing/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTHYPSetParameter}'"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bed∈bedRooms⇒customer∈dom(unlock)∧unlock∈CardIds ⇸ ℙ(Rooms)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.guard#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.guard#."/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTHYPSetParameter}'"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTHYPSetParameter}("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bed∈dom(isReserved)∧isReserved∈Rooms ⇸ ℤ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.guard#&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.guard#&gt;"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTHYPSetParameter}("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reservations ∖ {customer}⊆customers" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#f"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p"/>
@@ -243,7 +243,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#billing\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="beginning ∖ {customer ↦ beginning(customer)}∈reservations ∖ {customer} → ℕ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#M"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p"/>
@@ -251,7 +251,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#billing\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ending ∖ {customer ↦ ending(customer)}∈reservations ∖ {customer} → ℕ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#L"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p"/>
@@ -259,7 +259,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#billing\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="unlock ∖ {customer ↦ unlock(customer)}∈reservations ∖ {customer} → ℙ(Rooms)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#Q"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p"/>
@@ -267,7 +267,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#billing\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="isReserved{bed ↦ 0}∈bedRooms → {0,1}" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#^"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p"/>
@@ -275,7 +275,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#billing\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈reservations ∖ {customer}⇒(beginning ∖ {customer ↦ beginning(customer)})(x)&lt;(ending ∖ {customer ↦ ending(customer)})(x)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#N"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p"/>
@@ -283,7 +283,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#billing\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParametery|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂CardIds·x∈reservations ∖ {customer}⇒(∀y⦂Rooms·∀z⦂Rooms·y∈(unlock ∖ {customer ↦ unlock(customer)})(x)∧z∈(unlock ∖ {customer ↦ unlock(customer)})(x)∧y∈bedRooms∧z∈bedRooms⇒y=z)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#U"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p"/>
@@ -291,19 +291,19 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poSequent#billing\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="customer∈dom(beginning)∧beginning∈CardIds ⇸ ℤ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.action#6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.action#6"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="customer∈dom(ending)∧ending∈CardIds ⇸ ℤ" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.action#7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.action#7"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="billing/act4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="billing/act4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#EVTALLHYPSetParameter}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="customer∈dom(unlock)∧unlock∈CardIds ⇸ ℙ(Rooms)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.action#8"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.event#p|org.eventb.core.action#8"/>
@@ -337,7 +337,7 @@
 <org.eventb.core.poPredicateSet name="HYPSetParametery" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParameterx" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀x⦂CardIds·x∈reservations⇒beginning(x)&lt;ending(x)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#N"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParametery" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/1_PayementBilling.bpo|org.eventb.core.poFile#1_PayementBilling|org.eventb.core.poPredicateSet#HYPSetParametery" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀x⦂CardIds·x∈reservations⇒(∀y⦂Rooms·∀z⦂Rooms·y∈unlock(x)∧z∈unlock(x)∧y∈bedRooms∧z∈bedRooms⇒y=z)" org.eventb.core.source="/Project/1_PayementBilling.bum|org.eventb.core.machineFile#1_PayementBilling|org.eventb.core.invariant#U"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

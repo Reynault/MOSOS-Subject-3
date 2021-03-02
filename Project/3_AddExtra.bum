@@ -54,5 +54,6 @@
 <org.eventb.core.action name="." org.eventb.core.assignment="getExtra(customer) ≔ getExtra(customer) ∪ {service}" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="0" org.eventb.core.comment="the customer must have access to a service room" org.eventb.core.label="grd3" org.eventb.core.predicate="(serviceRooms ∩ unlock(customer)) ≠ ∅"/>
 <org.eventb.core.guard name="/" org.eventb.core.comment="the customer must have access to the room with the specified service" org.eventb.core.label="grd4" org.eventb.core.predicate="∃x· x ∈ (serviceRooms ∩ unlock(customer)) ∧ service ∈ servedServices(x)"/>
+<org.eventb.core.guard name="1" org.eventb.core.comment="the reservation must be valid" org.eventb.core.label="grd5" org.eventb.core.predicate="beginning(customer) ≤ today ∧ ending(customer) ≥ today"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

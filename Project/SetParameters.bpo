@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="3">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="State" org.eventb.core.type="ℙ(State)"/>
 <org.eventb.core.poIdentifier name="Doors" org.eventb.core.type="ℙ(Doors)"/>
 <org.eventb.core.poIdentifier name="Services" org.eventb.core.type="ℙ(Services)"/>
@@ -46,19 +46,19 @@
 <org.eventb.core.poIdentifier name="door2" org.eventb.core.type="Doors"/>
 <org.eventb.core.poIdentifier name="door1" org.eventb.core.type="Doors"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="axm9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="3">
+<org.eventb.core.poSequent name="axm9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="restaurant∈dom(servedServices)∧servedServices∈Rooms ⇸ ℙ(Services)" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#S"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#S"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex\|"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="3">
+<org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="massageRoom∈dom(servedServices)∧servedServices∈Rooms ⇸ ℙ(Services)" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#V"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#V"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex}"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="HYPContex|" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="HYPContex|" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="today=2021" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#."/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(serviceRooms,{restaurant,massageRoom})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#4"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(Services,{buyFood,massage})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#5"/>
@@ -68,10 +68,10 @@
 <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="partition(cleaners,{michel})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#F"/>
 <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="partition(Doors,{door1,door2,door3})" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#R"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPContex}" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex\|" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="HYPContex}" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex\|" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="servedServices(restaurant)={buyFood}" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#S"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex}" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Project/SetParameters.bpo|org.eventb.core.poFile#SetParameters|org.eventb.core.poPredicateSet#HYPContex}" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="servedServices(massageRoom)={massage}" org.eventb.core.source="/Project/SetParameters.buc|org.eventb.core.contextFile#SetParameters|org.eventb.core.axiom#V"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

@@ -57,7 +57,7 @@
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="cleaner"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="cleaner ∈ cleaners"/>
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="room"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="room ∈ Rooms ∧ isBeingCleaned(room) = 1"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="the room was cleaned" org.eventb.core.label="grd2" org.eventb.core.predicate="room ∈ Rooms ∧ isBeingCleaned(room) = 1"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="isBeingCleaned(room) ≔ 0" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="'(" org.eventb.core.comment="when a room is requested to be cleaned" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="requestCleaning">
@@ -71,8 +71,9 @@
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="customer"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="room"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="customer ∈ reservations"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="room ∈ bedRooms ∧ room ∈ unlock(customer)"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="toClean(room) = 0 ∧ isBeingCleaned(room) = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="the customer must have the room" org.eventb.core.label="grd2" org.eventb.core.predicate="room ∈ bedRooms ∧ room ∈ unlock(customer)"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="the room must not be already cleaned" org.eventb.core.label="grd3" org.eventb.core.predicate="toClean(room) = 0 ∧ isBeingCleaned(room) = 0"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="toClean(room) ≔ 1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="the reservation must be valid" org.eventb.core.label="grd4" org.eventb.core.predicate="beginning(customer) ≤ today ∧ ending(customer) ≥ today"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
