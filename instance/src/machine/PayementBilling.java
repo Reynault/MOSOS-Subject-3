@@ -79,15 +79,10 @@ public class PayementBilling {
         if (r == null)
             return -1;
         Bedroom bed = r.getRoom();
-        if (r != null
-            && bed.isReserved()
-            && r.getRoom().getNumber() == bed.getNumber()){
-            reservations.remove(r);
-            bed.setReserved(false);
-            customer.setExtras(null);
-            customer.setCardId(null);
-            return 0;
-        }
-        return -1;
+        reservations.remove(r);
+        bed.setReserved(false);
+        customer.getExtras().clear();
+        customer.setCardId(null);
+        return 0;
     }
 }
