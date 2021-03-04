@@ -36,7 +36,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="'." org.eventb.core.comment="when a cleaner is entering a room" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="checkInCleaner">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="checkInCleaner"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="isAlarmOn = 0"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="isAlarmOn = 0"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="'2" org.eventb.core.comment="when we set an emergency alarm off (like a fire alarm)" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="setAlarmOff">
 <org.eventb.core.action name="'" org.eventb.core.assignment="isAlarmOn ≔ 0" org.eventb.core.label="act2"/>
